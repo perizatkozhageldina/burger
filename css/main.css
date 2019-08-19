@@ -421,7 +421,10 @@ ul {
 
 p {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: 'ubunturegular', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px; }
 
 footer {
   position: relative;
@@ -438,7 +441,21 @@ button {
 
 .section {
   height: 100vh;
-  min-height: 650px; }
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .section--non-centered {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
 
 .hero {
   background: url("../content/main/bg.png") center center/cover no-repeat;
@@ -544,6 +561,8 @@ button {
     color: #2f3234; }
   .title--color--white {
     color: white; }
+  .title--center {
+    text-align: center; }
 
 .scroll-down-btn {
   background: url("../content/main/scroll-down-btn.png") center center/contain no-repeat;
@@ -556,3 +575,71 @@ button {
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%); }
+
+.best {
+  background: url("../content/best/bg.png") center center/cover no-repeat; }
+
+.best__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 35px;
+  text-align: center; }
+  .best__item:last-child {
+    margin-right: 0; }
+
+.best__desc {
+  margin-top: 35px; }
+
+.best__title {
+  color: #2f3234;
+  font-family: 'lifehackmedium', Helvetica, sans-serif;
+  font-size: 24px; }
+
+.best__text {
+  color: #2f3234;
+  opacity: .8;
+  margin-top: 20px;
+  text-align: center; }
+
+.reviews__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.reviews__item {
+  background: center center / cover no-repeat;
+  position: relative;
+  width: 25%;
+  height: 50%;
+  -webkit-filter: grayscale(100);
+  filter: grayscale(100); }
+  .reviews__item:hover .reviews__hover {
+    opacity: 1; }
+
+.reviews__hover {
+  color: #fff;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(68, 70, 70, 0.5);
+  padding: 50px 19px 19px 19px;
+  opacity: 0;
+  -webkit-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  transition: opacity .4s; }
+
+.reviews__text {
+  margin-top: 30px;
+  margin-bottom: 20px; }

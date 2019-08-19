@@ -1,6 +1,6 @@
 .title {
     font-size: 72px;
-    @include gagalinregular;
+    @include gagalinregular();
     color: $yellow;
     margin-bottom: 55px;
     line-height: 1;
@@ -11,5 +11,8 @@
         &--white {
             color: white;
         }
+    }
+    &--center {
+        text-align: center;
     }
 }
