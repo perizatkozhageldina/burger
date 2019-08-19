@@ -1,0 +1,15 @@
+.title {
+    font-size: 72px;
+    @include gagalinregular;
+    color: $yellow;
+    margin-bottom: 55px;
+    line-height: 1;
+    &--color {
+        &--black {
+            color: $black;
+        }
+        &--white {
+            color: white;
+        }
+    }
+}
