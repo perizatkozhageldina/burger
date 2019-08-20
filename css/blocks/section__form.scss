@@ -1,0 +1,82 @@
+.section__form {
+    background: url('../content/section__form/bg.png') center center / cover no-repeat;
+    color: white;
+    @include ubunturegular;
+}
+
+.form__elem {
+    display: flex;
+}
+
+.form__column {
+    margin-right: 20px;
+    flex: 1;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form--oneline {
+    display: flex;
+    align-items: center;
+
+    .form__title {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+}
+
+.form__title {
+    margin-bottom: 7px;
+}
+
+.form__block {
+    margin-right: 20px;
+    flex: 1;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+
+  .form__input {
+      padding: 8px 21px;
+      background: white;
+      color: $black;
+      border-radius: 3px;
+      border: none;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $yellow;
+        outline: none;
+      }
+
+      &--textarea {
+        resize: vertical;
+        height: 110px;
+    }
+  }
+
+  .form__radio {
+    position: relative;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+
+    &:focus::before {
+        content: "";
+        position: absolute;
+        border: 3.5px solid $red;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+    }
+
+  }
