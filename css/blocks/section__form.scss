@@ -74,9 +74,11 @@
         content: "";
         position: absolute;
         border: 3.5px solid $red;
-        border-radius: 50%;
-        top: 4px;
-        left: 4px;
+        @include circle;
     }
 
+  }
+
+  .btn-clean {
+      margin-left: 20px;
   }

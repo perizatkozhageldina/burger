@@ -13,6 +13,10 @@
     flex: .8;
 }
 
+.hero__content-img {
+    max-width: 100%;
+}
+
 .hero__desc {
     padding-top: 90px;
     margin-left: 20px;
@@ -24,3 +28,4 @@
     color: #fff;
     @include lifehackmedium();
 }
+

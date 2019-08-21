@@ -437,7 +437,8 @@ footer {
 button {
   background: transparent;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  color: inherit; }
 
 .section {
   height: 100vh;
@@ -475,6 +476,9 @@ button {
   -ms-flex: .8;
   flex: .8; }
 
+.hero__content-img {
+  max-width: 100%; }
+
 .hero__desc {
   padding-top: 90px;
   margin-left: 20px; }
@@ -504,6 +508,9 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.logo {
+  max-width: 92px; }
 
 .nav {
   margin-right: 15px; }
@@ -555,7 +562,7 @@ button {
   font-size: 72px;
   font-family: 'gagalinregular', Helvetica, sans-serif;
   color: #f9b43b;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
   line-height: 1; }
   .title--color--black {
     color: #2f3234; }
@@ -566,11 +573,11 @@ button {
 
 .scroll-down-btn {
   background: url("../content/main/scroll-down-btn.png") center center/contain no-repeat;
-  height: 14px;
-  width: 29px;
+  height: 40px;
+  width: 40px;
   display: block;
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -593,8 +600,11 @@ button {
   .best__item:last-child {
     margin-right: 0; }
 
-.best__desc {
-  margin-top: 35px; }
+.best__picture {
+  margin-bottom: 35px; }
+
+.best__picture-img {
+  height: 75px; }
 
 .best__title {
   color: #2f3234;
@@ -714,5 +724,120 @@ button {
     position: absolute;
     border: 3.5px solid #e35028;
     border-radius: 50%;
-    top: 4px;
-    left: 4px; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.btn-clean {
+  margin-left: 20px; }
+
+.fixed-menu {
+  position: fixed;
+  top: 95px;
+  right: 53px;
+  z-index: 100; }
+
+.fixed-menu__item--active .fixed-menu__dot {
+  border-color: white; }
+
+.fixed-menu__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 3px;
+  position: relative; }
+  .fixed-menu__dot::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .fixed-menu__dot:last-child {
+    margin-bottom: 0; }
+
+.team {
+  background: url("../content/team/bg.png") center center/cover no-repeat;
+  color: white;
+  position: relative; }
+
+.team__box {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #2f3234;
+  opacity: 0.93;
+  right: 0; }
+
+.team__info {
+  margin: 100px; }
+
+.members__name {
+  font-family: 'gagalinregular', Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  position: relative; }
+  .members__name::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 6px;
+    left: -20px;
+    border-style: solid;
+    border-width: 7px 4.5px 0 4.5px;
+    border-color: #f9b43b transparent transparent transparent; }
+  .members__name:last-child {
+    margin-bottom: 0; }
+
+.members__item .members__elem {
+  height: 0;
+  overflow: hidden; }
+
+.members__item--active .members__name {
+  color: #f9b43b; }
+  .members__item--active .members__name::before {
+    display: none; }
+  .members__item--active .members__name::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 6px;
+    left: -20px;
+    border-style: solid;
+    border-width: 0 4.5px 7px 4.5px;
+    border-color: transparent transparent #f9b43b transparent; }
+
+.members__item--active .members__elem {
+  min-height: 100px;
+  margin-bottom: 35px; }
+
+.members__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.members__title {
+  font-weight: bold; }
+
+.members__pic {
+  max-width: 100px;
+  min-height: 100px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px; }
