@@ -1,0 +1,26 @@
+.hero {
+    background:url("../content/main/bg.png") center center / cover no-repeat;
+    position: relative;
+}
+
+.hero__container {
+    height: 100%;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    flex: .8;
+}
+
+.hero__desc {
+    padding-top: 90px;
+    margin-left: 20px;
+}
+
+.hero__subtitle {
+    font-size: 65px;
+    line-height: 1;
+    color: #fff;
+    @include lifehackmedium();
+}

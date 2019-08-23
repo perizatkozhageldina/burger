@@ -1,0 +1,33 @@
+.best {
+    background: url('../content/best/bg.png') center center / cover no-repeat;
+}
+
+.best__list {
+    display: flex;
+}
+
+.best__item {
+    flex: 1;
+    margin-right: 35px;
+    text-align: center;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.best__desc {
+    margin-top: 35px;
+}
+
+.best__title {
+    color: $black;
+    @include lifehackmedium();
+    font-size: 24px;
+}
+
+.best__text {
+    color: $black;
+    opacity: .8;
+    margin-top: 20px;
+    text-align: center;
+}
