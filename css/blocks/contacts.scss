@@ -1,23 +1,29 @@
 .contacts {
-    background: url('../content/contacts/map.png') center center / cover no-repeat;
     position: relative;
+}
+
+.map {
+    background: url('../content/contacts/map.png') center center / cover no-repeat;
+    min-height: 100vh;
 }
 
 .footer {
     background: $black;
     position: absolute;
     bottom: 0;
-    display: flex;
-    align-items: center;
     min-height: 60px;
 }
 
 .footer__container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
 }
 
 .footer__content {
-    width: 50%;
+    max-width: 50%;
 }
 
 .footer__address {
@@ -25,14 +31,10 @@
 }
 
 .footer__phone {
+    cursor: pointer;
     display: flex;
     justify-content: flex-start;
-}
-
-.footer__number {
-    color: $orange;
-    font-weight: bold;
-    text-decoration: none;
+    max-height: 20px;
 }
 
 .phone-icon {
@@ -40,8 +42,16 @@
     max-width: 12px;
 }
 
+.footer__number {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 .footer__socials {
     display: flex;
+    max-height: 20px;
 }
 
 .icon {
@@ -52,7 +62,8 @@
     opacity: .3;
 
     &:hover {
-        color: white;
+        fill: white;
+        opacity: 1;
     }
 
     &:last-child {
