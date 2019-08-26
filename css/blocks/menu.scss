@@ -1,31 +1,29 @@
 .menu {
     background: url('../content/food/bg.png') center center / cover no-repeat;
     position: relative;   
-    display: flex; 
 }
 
 .menu__title {
     margin: 100px;
-    max-width: 20%;
 }
 
 .food {
     position: absolute;
     right: 0;
-    max-width: 80%;
+    height: 100%;
 }
 
 .food__list {
     display: flex;
+    height: 100%;
 }
 
 .food__item {
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-
+    height: 100%;
     &--active {
         .food__desc {
+            min-width: 600px;
+            max-height: 100%;
             background: #4c4e50;
             opacity: .8;
         }
@@ -38,8 +36,6 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     padding: 20px;
-    height: 100%;
-    display: flex;
 
     &--meat {
         background: url('../content/food/meateaters.png') center center / cover no-repeat;
@@ -60,5 +56,4 @@
 .food__text {
     color: white;
     margin: 50px;
-    text-align: justify;
 }

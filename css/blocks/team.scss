@@ -6,15 +6,12 @@
 
 .team__box {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    background-color: #2f3234;
-    opacity: 0.93;
+    left: 50%;
+    background-color: rgba(#2f3234, .93);
     right: 0;
-}
-
-.team__info {
-    margin: 100px;
+    top: 0;
+    bottom: 0;
+    padding: 5% 2% 0 7%;
 }
 
 .members__name {
