@@ -17,6 +17,11 @@
         flex-direction: column;
         padding: 0 23%;
     }
+
+    @include phones {
+        flex-direction: column;
+        padding: 0 20%;
+    }
 }
 
 .hero__content-img {
@@ -27,15 +32,25 @@
     width: 50%;
     padding-top: rem(90px);
     margin-left: rem(20px);
+    font-size: rem(65px);
 
     @include tablets {
         width: 100%;
         text-align: center;
+        padding-top: rem(40px);
+        margin: 0;
+    }
+
+    @include phones {
+        width: 100%;
+        text-align: center;
+        padding-top: rem(20px);
+        margin: 0;
+        font-size: rem(43px);
     }
 }
 
 .hero__subtitle {
-    font-size: rem(65px);
     line-height: 1;
     color: #fff;
     @include lifehackmedium();

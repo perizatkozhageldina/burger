@@ -22,6 +22,10 @@
         padding: 0 20%;
         text-align: center;
     }
+
+    @include phones {
+        padding: 0 10%;
+    }
 }
 
 .members__item {

@@ -32,6 +32,10 @@
             max-height: 100%;
             background: #4c4e50;
             opacity: .8;
+
+            @include phones {
+                min-width: rem(250px);
+            }
         }
     }
 }
@@ -43,6 +47,11 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     padding: rem(20px);
+
+    @include phones {
+        font-size: rem(25px);
+        padding: rem(10px);
+    }
 }
 
 .food__desc {
@@ -54,4 +63,8 @@
 .food__text {
     color: white;
     padding: rem(50px);
+
+    @include phones {
+        padding: rem(15px);
+    }
 }

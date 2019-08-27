@@ -38,12 +38,54 @@
     @include tablets {
         padding-top: 7%;
     }
+
+    @include phones {
+        padding-top: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .reviews__text {
+            display: none;
+        }
+
+        .btn--desktop {
+            display: none;
+        }
+        .btn--mobile {
+            display: block;
+        }
+    } 
+}
+
+.btn--mobile {
+    display: none;
 }
 
 .reviews__title {
     margin-bottom: rem(30px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+
+    @include phones {
+        @include gagalinregular();
+        font-weight: bold;
+        font-size: rem(24px);
+        text-align: center;
+    }
 }
 
 .reviews__text {
     margin-bottom: rem(20px);
+
+    @include tablets {
+        margin-bottom: rem(10px);
+    }
+
+    @include phones {
+        margin-bottom: rem(5px);
+    }
 }

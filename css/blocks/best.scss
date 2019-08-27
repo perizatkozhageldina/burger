@@ -4,19 +4,31 @@
 
 .best__list {
     display: flex;
+    
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .best__item {
     flex: 1;
     margin-right: rem(35px);
     text-align: center;
+
     &:last-child {
         margin-right: 0;
     }
-}
 
-.best__picture {
-    margin-bottom: rem(35px);
+    @include phones {
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        .best__picture {
+            width: 25%;
+            margin: 0 20px;
+        }
+    }
 }
 
 .meat-icon, .hand-icon, .natural-icon {
@@ -34,4 +46,8 @@
     color: $black;
     opacity: .8;
     text-align: center;
+
+    @include phones {
+        text-align: left;
+    }
 }
