@@ -819,21 +819,6 @@ button {
     .form__column {
       width: 100%;
       margin: 0; } }
-  @media screen and (max-width: 480px) {
-    .form__column--centered {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
 
 .form__row {
   width: 100%;
@@ -841,6 +826,11 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.625rem; }
+  @media screen and (max-width: 480px) {
+    .form__row {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .form--oneline {
   display: -webkit-box;
@@ -865,6 +855,11 @@ button {
     margin: 0; }
   .form__block--hidden-on-mobile {
     display: none; }
+  @media screen and (max-width: 480px) {
+    .form__block {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .form__input {
   padding: 0.5rem 1.3125rem;
@@ -881,25 +876,33 @@ button {
     height: 6.875rem; }
 
 .form__radio {
-  position: relative;
+  position: absolute;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+  background-color: #fff;
+  border-radius: 50%;
   cursor: pointer;
-  width: 0.9375rem;
-  height: 0.9375rem; }
-  .form__radio:focus::before {
-    content: "";
-    position: absolute;
-    border: 3.5px solid #e35028;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+  top: 0;
+  left: 0; }
+  .form__radio:checked ~ .radio {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #e45028;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
 
-.form__checkbox:checked::before {
-  content: "";
-  background: url("../content/section__form/checkbox.png"); }
+.form__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px; }
 
 .btn-clean {
   margin-left: 1.25rem; }

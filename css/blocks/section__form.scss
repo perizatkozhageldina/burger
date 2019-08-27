@@ -31,21 +31,16 @@
         margin: 0;
     }
 
-    &--centered {
-        @include phones {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
 }
 
 .form__row {
     width: 100%;
     display: flex;
     margin-bottom: rem(10px);
+
+    @include phones {
+        justify-content: center;
+    }
 }
 
 .form--oneline {
@@ -73,6 +68,11 @@
     &--hidden-on-mobile {
         display: none;
     }
+
+    @include phones {
+        justify-content: center;
+    }
+
   }
 
   .form__input {
@@ -95,23 +95,40 @@
   }
 
   .form__radio {
-    position: relative;
+	position: absolute;
+	opacity: 0;
+    margin: 10px 0 0 7px;
+    background-color: #fff;
+    border-radius: 50%;
     cursor: pointer;
-    width: rem(15px);
-    height: rem(15px);
-
-    &:focus::before {
-        content: "";
-        position: absolute;
-        border: 3.5px solid $red;
-        @include circle;
+    top: 0;
+    left: 0;
+    
+    &:checked ~ .radio {
+        background: #fff;
+        width: 10px;
+        height: 10px;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $orange;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
+}
 
-  }
-
-  .form__checkbox:checked::before {
-    content: "";
-    background: url('../content/section__form/checkbox.png');
+  .form__checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+    margin: 10px 0 0 20px;
+    
+    &:checked ~ .checkbox {
+        
+    }
   }
 
   .btn-clean {
