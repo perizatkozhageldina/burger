@@ -390,12 +390,12 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden; }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -782,6 +782,8 @@ button {
   font-family: 'gagalinregular', Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 35px;
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
   position: relative; }
   .members__name::before {
@@ -844,7 +846,9 @@ button {
   position: relative; }
 
 .menu__title {
-  margin: 100px; }
+  position: absolute;
+  top: 10%;
+  left: 10%; }
 
 .food {
   position: absolute;
@@ -858,7 +862,12 @@ button {
   height: 100%; }
 
 .food__item {
-  height: 100%; }
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .food__item--active .food__title {
+    color: #f9b43b; }
   .food__item--active .food__desc {
     min-width: 600px;
     max-height: 100%;
@@ -867,7 +876,8 @@ button {
 
 .food__title {
   font-size: 40px;
-  margin: 0;
+  height: 100%;
+  text-decoration: none;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
@@ -875,26 +885,22 @@ button {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   padding: 20px; }
-  .food__title--meat {
-    background: url("../content/food/meateaters.png") center center/cover no-repeat; }
-  .food__title--vegan {
-    background: url("../content/food/vegetarian.png") center center/cover no-repeat; }
-  .food__title--diet {
-    background: url("../content/food/diet.png") center center/cover no-repeat; }
 
 .food__desc {
   width: 0;
+  height: 100%;
   overflow: hidden; }
 
 .food__text {
   color: white;
-  margin: 50px; }
+  padding: 50px; }
 
 .contacts {
   position: relative;
   font-size: 14px; }
 
 .map {
+  position: absolute;
   background: url("../content/contacts/map.png") center center/cover no-repeat;
   min-height: 100vh; }
 
