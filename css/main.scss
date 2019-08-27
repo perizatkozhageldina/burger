@@ -8,11 +8,13 @@ $z-fixed-menu: 100;
 //normalize
 @import "base/normalize.scss";
 
+//media
+@import "base/media.scss";
+
 //setups
 @import "base/fonts.scss";
 @import "base/layout.scss";
 @import "base/mixins.scss";
-@import "base/media.scss";
 
 //blocks
 @import "blocks/section.scss";

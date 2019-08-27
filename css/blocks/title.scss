@@ -1,8 +1,8 @@
 .title {
-    font-size: 72px;
+    font-size: rem(72px);
     @include gagalinregular();
     color: $yellow;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
     line-height: 1;
     &--color {
         &--black {

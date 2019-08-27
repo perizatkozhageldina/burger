@@ -5,13 +5,18 @@
 
 .hero__container {
     height: 100%;
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
 }
 
 .hero__content {
     display: flex;
     align-items: center;
     flex: .8;
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 23%;
+    }
 }
 
 .hero__content-img {
@@ -19,12 +24,18 @@
 }
 
 .hero__desc {
-    padding-top: 90px;
-    margin-left: 20px;
+    width: 50%;
+    padding-top: rem(90px);
+    margin-left: rem(20px);
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .hero__subtitle {
-    font-size: 65px;
+    font-size: rem(65px);
     line-height: 1;
     color: #fff;
     @include lifehackmedium();

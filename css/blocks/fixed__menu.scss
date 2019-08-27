@@ -1,8 +1,12 @@
 .fixed-menu {
     position: fixed;
-    top: 95px;
-    right: 53px;
+    top: rem(95px);
+    right: rem(53px);
     z-index: $z-fixed-menu;
+    
+    @include tablets {
+        display: none;
+    }
 }
 
 .fixed-menu__item {
@@ -14,17 +18,17 @@
 }
 
 .fixed-menu__dot {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
-    border: 1px solid transparent;
-    margin-bottom: 3px;
+    border: rem(1px) solid transparent;
+    margin-bottom: rem(3px);
     position: relative;
 
     &::before {
         content: "";
-        width: 6px;
-        height: 6px;
+        width: rem(6px);
+        height: rem(6px);
         background: #fff;
         @include circle;
     }

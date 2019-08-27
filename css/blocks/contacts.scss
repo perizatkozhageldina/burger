@@ -1,10 +1,9 @@
 .contacts {
     position: relative;
-    font-size: 14px;
+    font-size: rem(14px);
 }
 
 .map {
-    position: absolute;
     background: url('../content/contacts/map.png') center center / cover no-repeat;
     min-height: 100vh;
 }
@@ -13,7 +12,7 @@
     background: $black;
     position: absolute;
     bottom: 0;
-    min-height: 60px;
+    min-height: rem(60px);
 }
 
 .footer__container {
@@ -21,7 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: rem(10px);
 }
 
 .footer__content {
@@ -41,15 +40,15 @@
 
 .phone-icon {
     fill: $orange;
-    max-width: 12px;
-    max-height: 11px;
+    max-width: rem(12px);
+    max-height: rem(11px);
 }
 
 .footer__number {
     color: $orange;
     font-weight: bold;
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .footer__socials {
@@ -58,9 +57,9 @@
 
 .icon {
     cursor: pointer;
-    max-width: 20px;
-    max-height: 20px;
-    margin-right: 20px;
+    max-width: rem(20px);
+    max-height: rem(20px);
+    margin-right: rem(20px);
     color: $black;
     opacity: .3;
     transition: opacity .4s;

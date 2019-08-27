@@ -8,7 +8,7 @@
 
 .best__item {
     flex: 1;
-    margin-right: 35px;
+    margin-right: rem(35px);
     text-align: center;
     &:last-child {
         margin-right: 0;
@@ -16,18 +16,18 @@
 }
 
 .best__picture {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
 }
 
 .meat-icon, .hand-icon, .natural-icon {
-    max-width: 75px;
+    max-width: rem(75px);
 }
 
 .best__title {
     color: $black;
     @include lifehackmedium();
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: rem(24px);
+    margin-bottom: rem(20px);
 }
 
 .best__text {

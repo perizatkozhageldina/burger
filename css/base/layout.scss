@@ -1,9 +1,21 @@
 html, body {
     height: 100%;
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+
+    @include smallscreen {
+        font-size: 13px;
+    }
 }
 
 body {
-    font-size: 16px;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,14 +26,13 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    // min-width: 940px + 20px;
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
     width: 95%;
-    max-width: 940px;
+    max-width: rem(940px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;

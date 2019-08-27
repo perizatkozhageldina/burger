@@ -16,6 +16,11 @@
             opacity: 1;
         }
     }
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .reviews__hover {
@@ -26,15 +31,19 @@
     right: 0;
     bottom: 0;
     background: rgba(#444646, .5);
-    padding: 50px 19px 19px 19px;
+    padding: rem(50px) rem(19px) rem(19px) rem(19px);
     opacity: 0;
     transition: opacity .4s;
+
+    @include tablets {
+        padding-top: 7%;
+    }
 }
 
 .reviews__title {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 .reviews__text {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
