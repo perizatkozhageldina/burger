@@ -117,6 +117,11 @@
     flex-shrink: 0;
     margin-right: rem(20px);
 
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(20px);
+    }
+
     @include phones {
         margin-right: 0;
         margin-bottom: rem(20px);
@@ -132,4 +137,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.members__desc {
+    font-size: rem(16px);
 }

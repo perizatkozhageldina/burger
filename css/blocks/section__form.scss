@@ -121,6 +121,10 @@
     background-color: #eee;
     border-radius: 50%;
 
+    @include tablets {
+        top: 2px;
+    }
+    
     @include phones {
         top: 2px;
         left: 9px;
