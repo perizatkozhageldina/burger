@@ -832,17 +832,6 @@ button {
       -ms-flex-pack: center;
       justify-content: center; } }
 
-.form--oneline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .form--oneline .form__title {
-    margin-bottom: 0;
-    margin-left: 0.625rem; }
-
 .form__title {
   margin-bottom: 0.4375rem; }
 
@@ -866,7 +855,7 @@ button {
   background: white;
   color: #2f3234;
   border-radius: 3px;
-  border: none;
+  border: 1px solid transparent;
   width: 100%; }
   .form__input:focus {
     border: 1px solid #f9b43b;
@@ -875,37 +864,116 @@ button {
     resize: vertical;
     height: 6.875rem; }
 
-.form__radio {
-  position: absolute;
-  opacity: 0;
-  margin: 10px 0 0 7px;
-  background-color: #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  top: 0;
-  left: 0; }
-  .form__radio:checked ~ .radio {
-    background: #fff;
-    width: 10px;
-    height: 10px;
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid #e45028;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-
-.form__checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  margin: 10px 0 0 20px; }
-
 .btn-clean {
   margin-left: 1.25rem; }
+
+.radio-label {
+  display: block;
+  position: relative;
+  padding-left: 1.875rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  @media screen and (max-width: 480px) {
+    .radio-label {
+      text-align: center; } }
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.radio-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.9375rem;
+  width: 0.9375rem;
+  background-color: #eee;
+  border-radius: 50%; }
+  @media screen and (max-width: 480px) {
+    .radio-btn {
+      top: 2px;
+      left: 9px; } }
+
+.radio-label input:checked ~ .radio-btn {
+  background-color: white; }
+
+.radio-btn:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.radio-label input:checked ~ .radio-btn:after {
+  display: block; }
+
+.radio-label .radio-btn:after {
+  top: 0.25rem;
+  left: 0.21875rem;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: #e45028; }
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 1.875rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  @media screen and (max-width: 480px) {
+    .checkbox-label {
+      text-align: center; } }
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.checkbox-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.9375rem;
+  width: 0.9375rem;
+  background-color: white; }
+  @media screen and (max-width: 480px) {
+    .checkbox-btn {
+      top: 2px;
+      left: 95px; } }
+
+.checkbox-label input:checked ~ .checkbox-btn {
+  background-color: white; }
+
+.checkbox-btn:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.checkbox-label input:checked ~ .checkbox-btn:after {
+  display: block; }
+
+.checkbox-label .checkbox-btn:after {
+  left: 0.25rem;
+  top: 0.0625rem;
+  width: 0.1875rem;
+  height: 0.4375rem;
+  border: solid #e45028;
+  border-width: 0 0.1875rem 0.1875rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 .fixed-menu {
   position: fixed;
@@ -1071,7 +1139,6 @@ button {
   height: 100%; }
 
 .food__item {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1084,9 +1151,11 @@ button {
     opacity: .8; }
     @media screen and (max-width: 480px) {
       .food__item--active .food__desc {
-        min-width: 15.625rem; } }
+        min-width: 12.5rem; } }
 
 .food__title {
+  font-family: 'gagalinregular', Helvetica, sans-serif;
+  color: white;
   font-size: 2.5rem;
   height: 100%;
   text-decoration: none;
@@ -1096,7 +1165,8 @@ button {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  margin-bottom: 0; }
   @media screen and (max-width: 480px) {
     .food__title {
       font-size: 1.5625rem;

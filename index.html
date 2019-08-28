@@ -183,7 +183,9 @@
             <div class="accordeon food">
                 <ul class="food__list">
                     <li class="food__item food__item--active">
-                        <a href="#" class="title title--color--white food__title" style="background-image: url('content/food/meateaters.png');">Для мясоедов</a>
+                        <div class="food__link" style="background: url('content/food/meateaters.png') center center / cover no-repeat;">
+                            <a href="#" class="food__title">Для мясоедов</a>
+                        </div>
                         <div class="food__desc">
                             <div class="food__text">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -191,7 +193,9 @@
                         </div>
                     </li>
                     <li class="food__item">
-                        <a href="#" class="title title--color--white food__title" style="background-image: url('content/food/vegetarian.png');">Вегетарианское</a>
+                        <div class="food__link" style="background: url('content/food/vegetarian.png') center center / cover no-repeat;">
+                            <a href="#" class="food__title">Вегетарианское</a>
+                        </div>
                         <div class="food__desc">
                             <div class="food__text">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -199,7 +203,9 @@
                         </div>
                     </li>
                     <li class="food__item">
-                        <a href="#" class="title title--color--white food__title" style="background-image: url('content/food/diet.png');">Диетическое</a>
+                        <div class="food__link" style="background: url('content/food/diet.png') center center / cover no-repeat;">
+                            <a href="#" class="food__title">Диетическое</a>
+                        </div>
                         <div class="food__desc">
                             <div class="food__text">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto error omnis saepe, impedit architecto natus unde vel. Dolorum dolores nisi explicabo vel illo dolore exercitationem similique! Ad, ut aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -358,22 +364,19 @@
                                 </label>
                             </div>
                             <div class="form__row">
-                                <label class="form__block form--oneline">
-                                    <input name="form__radio" type="radio" class="form__radio">
-                                    <div class="radio"></div>
-                                    <div class="form__title">Потребуется сдача</div>
+                                <label class="form__block radio-label">Потребуется сдача
+                                    <input name="radio" type="radio">
+                                    <div class="radio-btn"></div>
                                 </label>
-                                <label class="form__block form--oneline">
-                                    <input name="form__radio" type="radio" class="form__radio">
-                                    <div class="radio"></div>
-                                    <div class="form__title">Оплата по карте</div>
+                                <label class="form__block radio-label">Оплата по карте
+                                    <input name="radio" type="radio" class="radio-input">
+                                    <div class="radio-btn"></div>
                                 </label>
                             </div>
                             <div class="form__row">
-                                <label class="form__block form--oneline">
-                                    <input type="checkbox" class="form__checkbox">
-                                    <div class="checkbox"></div>
-                                    <div class="form__title">Не перезванивать</div>
+                                <label class="form__block checkbox-label">Не перезванивать
+                                    <input type="checkbox">
+                                    <div class="checkbox-btn"></div>
                                 </label>
                             </div>
                             <div class="form__row">
