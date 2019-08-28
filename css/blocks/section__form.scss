@@ -126,8 +126,7 @@
     }
     
     @include phones {
-        top: 2px;
-        left: 9px;
+        left: 30px;
     }
   }
   
@@ -187,8 +186,12 @@
     background-color: white;
 
     @include phones {
-        top: 2px;
-        left: 95px;
+      top: 2px;
+      left: 95px;
+  }
+
+    @include phones {
+        left: 130px;
     }
   }
   

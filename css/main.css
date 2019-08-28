@@ -901,8 +901,7 @@ button {
       top: 2px; } }
   @media screen and (max-width: 480px) {
     .radio-btn {
-      top: 2px;
-      left: 9px; } }
+      left: 30px; } }
 
 .radio-label input:checked ~ .radio-btn {
   background-color: white; }
@@ -955,6 +954,9 @@ button {
     .checkbox-btn {
       top: 2px;
       left: 95px; } }
+  @media screen and (max-width: 480px) {
+    .checkbox-btn {
+      left: 130px; } }
 
 .checkbox-label input:checked ~ .checkbox-btn {
   background-color: white; }
