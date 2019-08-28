@@ -49,6 +49,7 @@
     transform: rotate(180deg);
     padding: rem(20px);
     margin-bottom: 0;
+    white-space: nowrap;
 
     @include phones {
         font-size: rem(25px);

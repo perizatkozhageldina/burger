@@ -1180,7 +1180,8 @@ button {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   padding: 1.25rem;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  white-space: nowrap; }
   @media screen and (max-width: 480px) {
     .food__title {
       font-size: 1.5625rem;
