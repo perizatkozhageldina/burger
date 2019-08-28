@@ -89,19 +89,14 @@
   }
 
 .radio-label {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: rem(30px);
     font-size: rem(14px);
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    @include phones {
-        text-align: center;
-    }
   }
   
   .radio-label input {
@@ -113,21 +108,12 @@
   }
   
   .radio-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-right: 5px;
     height: rem(15px);
     width: rem(15px);
     background-color: #eee;
     border-radius: 50%;
-
-    @include tablets {
-        top: 2px;
-    }
-    
-    @include phones {
-        left: 10px;
-    }
   }
   
   .radio-label input:checked ~ .radio-btn {
@@ -155,19 +141,14 @@
   }
 
 .checkbox-label {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: rem(30px);
     cursor: pointer;
     font-size: rem(14px);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    
-    @include phones {
-        text-align: center;
-    }
   }
   
   .checkbox-label input {
@@ -179,20 +160,11 @@
   }
   
   .checkbox-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-right: 5px;
     height: rem(15px);
     width: rem(15px);
     background-color: white;
-
-    @include tablets {
-      top: 2px;
-  }
-
-    @include phones {
-        left: 95px;
-    }
   }
   
   .checkbox-label input:checked ~ .checkbox-btn {
@@ -210,7 +182,7 @@
   }
   
   .checkbox-label .checkbox-btn:after {
-    left: rem(4px);
+    left: rem(5px);
     top: rem(1px);
     width: rem(3px);
     height: rem(7px);

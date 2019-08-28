@@ -868,18 +868,16 @@ button {
   margin-left: 1.25rem; }
 
 .radio-label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  padding-left: 1.875rem;
   font-size: 0.875rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  @media screen and (max-width: 480px) {
-    .radio-label {
-      text-align: center; } }
 
 .radio-label input {
   position: absolute;
@@ -889,19 +887,12 @@ button {
   width: 0; }
 
 .radio-btn {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  margin-right: 5px;
   height: 0.9375rem;
   width: 0.9375rem;
   background-color: #eee;
   border-radius: 50%; }
-  @media screen and (max-width: 768px) {
-    .radio-btn {
-      top: 2px; } }
-  @media screen and (max-width: 480px) {
-    .radio-btn {
-      left: 10px; } }
 
 .radio-label input:checked ~ .radio-btn {
   background-color: white; }
@@ -926,18 +917,16 @@ button {
   background: #e45028; }
 
 .checkbox-label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  padding-left: 1.875rem;
   cursor: pointer;
   font-size: 0.875rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  @media screen and (max-width: 480px) {
-    .checkbox-label {
-      text-align: center; } }
 
 .checkbox-label input {
   position: absolute;
@@ -947,18 +936,11 @@ button {
   width: 0; }
 
 .checkbox-btn {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  margin-right: 5px;
   height: 0.9375rem;
   width: 0.9375rem;
   background-color: white; }
-  @media screen and (max-width: 768px) {
-    .checkbox-btn {
-      top: 2px; } }
-  @media screen and (max-width: 480px) {
-    .checkbox-btn {
-      left: 95px; } }
 
 .checkbox-label input:checked ~ .checkbox-btn {
   background-color: white; }
@@ -972,7 +954,7 @@ button {
   display: block; }
 
 .checkbox-label .checkbox-btn:after {
-  left: 0.25rem;
+  left: 0.3125rem;
   top: 0.0625rem;
   width: 0.1875rem;
   height: 0.4375rem;
