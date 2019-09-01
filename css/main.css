@@ -1295,3 +1295,48 @@ button {
     opacity: 1; }
   .icon:last-child {
     margin-right: 0; }
+
+.popup-menu {
+  background-color: #2f3234;
+  opacity: .8;
+  height: 100vh; }
+
+.popup-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100%; }
+
+.popup-menu__item {
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem; }
+  .popup-menu__item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-top: 1.25rem;
+    text-align: center;
+    width: 0.625rem;
+    height: 0.625rem;
+    background: #fff;
+    border-radius: 50%; }
+  .popup-menu__item:last-child::after {
+    display: none; }
+
+.popup-menu__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.625rem;
+  font-family: 'ubunturegular', Helvetica, sans-serif;
+  font-weight: 300; }

@@ -1,0 +1,42 @@
+.popup-menu {
+    background-color: $black;
+    opacity: .8;
+    height: 100vh;    
+}
+
+.popup-menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.popup-menu__item {
+    margin-bottom: rem(20px);
+    margin-top: rem(20px);
+    
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-top: rem(20px);
+        
+        text-align: center;
+        width: rem(10px);
+        height: rem(10px);
+        background: #fff;
+        border-radius: 50%;
+    }
+    &:last-child::after {
+        display: none;
+    }
+}
+
+.popup-menu__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: rem(26px);
+    @include ubunturegular();
+}
