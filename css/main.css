@@ -1424,8 +1424,13 @@ button {
   position: relative; }
 
 .slider__right {
-  padding: 0 2%;
-  text-align: center; }
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .slider__right {
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .slider__right {
+      padding: 0 2%; } }
 
 .ingredients {
   display: block;

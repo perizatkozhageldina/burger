@@ -38,8 +38,15 @@
 }
 
 .slider__right {
-    padding: 0 2%;
-    text-align: center;
+    width: 100%;
+    
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones{
+        padding: 0 2%;        
+    }
 }
 
 .ingredients {
