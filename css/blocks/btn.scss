@@ -5,4 +5,5 @@
     text-transform: uppercase;
     color: #fff;
     font-size: rem(13px);
+    @include ubunturegular();
 }

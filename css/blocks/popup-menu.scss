@@ -17,14 +17,16 @@
     top: 2px;
     width: 32px;   
     color: #fff;
-  }
-  .close:hover {
-    opacity: 1;
-  }
-  .close:before {
-    content: "\00d7";
-    position: absolute;
-    font-size: 50px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:before {
+        content: "\00d7";
+        position: absolute;
+        font-size: 50px;
+    }
   }
 
 .popup-menu__list {
