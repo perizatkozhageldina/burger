@@ -1,0 +1,39 @@
+.fixed-menu {
+    position: fixed;
+    top: rem(95px);
+    right: rem(53px);
+    z-index: $z-fixed-menu;
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.fixed-menu__item {
+    &--active {
+        .fixed-menu__dot {
+            border-color:white;
+        }
+    }
+}
+
+.fixed-menu__dot {
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: rem(1px) solid transparent;
+    margin-bottom: rem(3px);
+    position: relative;
+
+    &::before {
+        content: "";
+        width: rem(6px);
+        height: rem(6px);
+        background: #fff;
+        @include circle;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

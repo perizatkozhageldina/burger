@@ -1,5 +1,4 @@
 .header {
-    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,5 +7,35 @@
 .header__buttons {
     display: flex;
     align-items: center;
+}
+
+.logo-icon {
+    max-width: rem(92px);
+    max-height: rem(92px);
+}
+
+.hamburger-menu {
+    position: relative;
+    height: rem(22px);
+    margin-left: 20px;
+    vertical-align: middle;
+    align-items: center;
+    display: none;
+    
+    @include tablets {
+        display: flex;
+    }
+}
+
+.hamburger-menu__icon {
+        background: #fff;
+        width: rem(24px);
+        height: rem(5px);
+        border-radius: 3px;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 }
 

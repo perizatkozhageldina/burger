@@ -1,9 +1,21 @@
 html, body {
     height: 100%;
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+
+    @include smallscreen {
+        font-size: 13px;
+    }
 }
 
 body {
-    font-size: 16px;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,20 +26,20 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    min-width: 940px + 20px;
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
-    width: 940px;
+    width: 95%;
+    max-width: rem(940px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
+    margin: 0;
     font-weight: normal;
 }
 
@@ -48,7 +60,6 @@ p {
     padding: 0;
     margin: 0;
     @include ubunturegular;
-    font-size: 14px;
 }
 
 footer {
@@ -64,4 +75,5 @@ button {
     background: transparent;
     border: none;
     cursor: pointer;
+    color: inherit;
 }

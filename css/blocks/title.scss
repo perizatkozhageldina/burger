@@ -1,8 +1,8 @@
 .title {
-    font-size: 72px;
+    font-size: rem(72px);
     @include gagalinregular();
     color: $yellow;
-    margin-bottom: 55px;
+    margin-bottom: rem(40px);
     line-height: 1;
     &--color {
         &--black {
@@ -14,5 +14,10 @@
     }
     &--center {
         text-align: center;
+    }
+
+    @include phones {
+        font-size: rem(63px);
+        margin-bottom: rem(20px); 
     }
 }

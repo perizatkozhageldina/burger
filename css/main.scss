@@ -3,13 +3,18 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
+$z-fixed-menu: 100;
 
 //normalize
 @import "base/normalize.scss";
 
+//media
+@import "base/media.scss";
+
 //setups
 @import "base/fonts.scss";
 @import "base/layout.scss";
+@import "base/mixins.scss";
 
 //blocks
 @import "blocks/section.scss";
@@ -21,3 +26,8 @@ $red: #e35028;
 @import "blocks/scroll-down-btn.scss";
 @import "blocks/best.scss";
 @import "blocks/reviews.scss";
+@import "blocks/section__form.scss";
+@import "blocks/fixed__menu.scss";
+@import "blocks/team.scss";
+@import "blocks/menu.scss";
+@import "blocks/contacts.scss";

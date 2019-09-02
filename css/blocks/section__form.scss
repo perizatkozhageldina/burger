@@ -1,0 +1,194 @@
+.section__form {
+    background: url('../content/section__form/bg.png') center center / cover no-repeat;
+    color: white;
+    @include ubunturegular();
+}
+
+.form__elem {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__column {
+    margin-right: rem(20px);
+    width: 50%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+.form__row {
+    width: 100%;
+    display: flex;
+    margin-bottom: rem(10px);
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__title {
+    margin-bottom: rem(7px);
+}
+
+.form__block {
+    margin-left: rem(20px);
+    flex: 1;
+    
+    &:first-child {
+        margin: 0;
+    }
+
+    &--hidden-on-mobile {
+        display: none;
+    }
+
+    @include phones {
+        justify-content: center;
+    }
+
+  }
+
+  .form__input {
+      padding: rem(8px) rem(21px);
+      background: white;
+      color: $black;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $yellow;
+        outline: none;
+      }
+
+      &--textarea {
+        resize: vertical;
+        height: rem(110px);
+    }
+  }
+
+  .btn-clean {
+      margin-left: rem(20px);
+  }
+
+.radio-label {
+    display: flex;
+    position: relative;
+    font-size: rem(14px);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .radio-btn {
+    position: relative;
+    margin-right: 5px;
+    height: rem(15px);
+    width: rem(15px);
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .radio-label input:checked ~ .radio-btn {
+    background-color: white;
+  }
+  
+  .radio-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .radio-label input:checked ~ .radio-btn:after {
+    display: block;
+  }
+
+  .radio-label .radio-btn:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(7px);
+    height: rem(7px);
+    border-radius: 50%;
+    background: $orange;
+  }
+
+.checkbox-label {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    font-size: rem(14px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-btn {
+    position: relative;
+    margin-right: 5px;
+    height: rem(15px);
+    width: rem(15px);
+    background-color: white;
+  }
+  
+  .checkbox-label input:checked ~ .checkbox-btn {
+    background-color: white;
+  }
+  
+  .checkbox-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-label input:checked ~ .checkbox-btn:after {
+    display: block;
+  }
+  
+  .checkbox-label .checkbox-btn:after {
+    left: rem(5px);
+    top: rem(1px);
+    width: rem(3px);
+    height: rem(7px);
+    border: solid $orange;
+    border-width: 0 rem(3px) rem(3px) 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
