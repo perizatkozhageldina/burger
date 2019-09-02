@@ -1436,7 +1436,7 @@ button {
   display: block;
   width: 5.625rem;
   height: 5.625rem;
-  background: #e45028;
+  background: rgba(227, 80, 40, 0.4);
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1452,9 +1452,11 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative; }
-  .ingredients:hover .ingredients__hover {
-    opacity: 1;
-    left: 100%; }
+  .ingredients:hover {
+    background: #e45028; }
+    .ingredients:hover .ingredients__hover {
+      opacity: 1;
+      left: 100%; }
 
 .ingredients__text {
   color: white;
@@ -1488,7 +1490,6 @@ button {
   .ingredients__close:hover {
     opacity: 1; }
   .ingredients__close:before {
-    content: "\00d7";
     position: absolute;
     font-size: 50px; }
 
