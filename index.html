@@ -42,7 +42,7 @@
                             </ul>
                         </nav>
                         <button type="button" class="btn">Заказать</button>
-                        <a href="#" class="hamburger-menu">
+                        <a href="#" class="hamburger-menu" id="hamburger-menu">
                             <div class="hamburger-menu__link">
                                 <div class="hamburger-menu__icon"></div>
                                 <div class="hamburger-menu__icon"></div>
@@ -66,6 +66,33 @@
                     <use xlink:href="content/sprite.svg#scroll-down-arrow"></use>
                 </svg>
             </button>
+            <div class="popup-menu" id="popup-menu">
+                <div class="close" id="close">
+                </div>
+                <ul class="popup-menu__list">
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">О нас</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Бургеры</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Команда</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Меню</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Как мы работаем</a>
+                    </li>
+                    <li class="popup-menu__item">
+                        <a class="popup-menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="section best">
             <div class="container">
@@ -111,6 +138,27 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="section slider">
+            <div class="container">
+                <div class="arrow-left"></div>
+                <div class="slider__main-content">
+                    <div class="slider__left">
+                        <div class="sliider__ingredients">
+                           <svg>
+                                <use xlink:href="content/sprite.svg#burger"></use>
+                           </svg> 
+                           <span>Состав</span>
+                        </div>
+                        <div class="silder__pic">
+                            <img src="content/" alt="" class="slider__img">
+                        </div>
+                    </div>
+                    <div class="slider__right">
+
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section section--non-centered team">
@@ -450,31 +498,7 @@
                 <button class="fixed-menu__dot"></button>            
             </li>
         </ul>
-        <div class="popup-menu">
-            <ul class="popup-menu__list">
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">О нас</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Бургеры</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Команда</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Меню</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Отзывы</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Как мы работаем</a>
-                </li>
-                <li class="popup-menu__item">
-                    <a class="popup-menu__link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

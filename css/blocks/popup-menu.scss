@@ -1,8 +1,31 @@
+.disable-scrolling {
+    overflow: hidden;
+}
+
 .popup-menu {
     background-color: $black;
-    opacity: .8;
-    height: 100vh;    
+    opacity: .93;
+    height: 100vh;
+    width: 100vw;    
+    display: none;
+    position: absolute;
 }
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    width: 32px;   
+    color: #fff;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before {
+    content: "\00d7";
+    position: absolute;
+    font-size: 50px;
+  }
 
 .popup-menu__list {
     display: flex;

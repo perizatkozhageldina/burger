@@ -547,7 +547,8 @@ button {
 
 .logo-icon {
   max-width: 5.75rem;
-  max-height: 5.75rem; }
+  max-height: 5.75rem;
+  z-index: 20; }
 
 .hamburger-menu {
   position: relative;
@@ -562,7 +563,8 @@ button {
     .hamburger-menu {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      margin-right: 20px; } }
 
 .hamburger-menu__icon {
   background: #fff;
@@ -1296,10 +1298,31 @@ button {
   .icon:last-child {
     margin-right: 0; }
 
+.disable-scrolling {
+  overflow: hidden; }
+
 .popup-menu {
   background-color: #2f3234;
-  opacity: .8;
-  height: 100vh; }
+  opacity: .93;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  position: absolute; }
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  width: 32px;
+  color: #fff; }
+
+.close:hover {
+  opacity: 1; }
+
+.close:before {
+  content: "\00d7";
+  position: absolute;
+  font-size: 50px; }
 
 .popup-menu__list {
   display: -webkit-box;
