@@ -1477,7 +1477,8 @@ button {
   transition: opacity .4s; }
   @media screen and (max-width: 480px) {
     .ingredients__hover {
-      padding: 5px; } }
+      padding: 5px;
+      width: 200px; } }
 
 .ingredients__close {
   right: 0;
