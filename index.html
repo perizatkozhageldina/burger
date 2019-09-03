@@ -69,7 +69,7 @@
             <div class="popup-menu" id="popup-menu">
                 <div class="close" id="close">
                 </div>
-                <ul class="popup-menu__list">
+                <ul class="popup-menu__list" id="popup-menu__list">
                     <li class="popup-menu__item">
                         <a class="popup-menu__link" href="#">О нас</a>
                     </li>
@@ -156,8 +156,7 @@
                                         <use xlink:href="content/sprite.svg#burger"></use>
                                     </svg> 
                                     <span class="ingredients__text">Состав</span>
-                                    <div class="ingredients__hover">
-                                        <div class="ingredients__close"></div>
+                                    <div class="ingredients__hover" id="ingredients__hover">                                        
                                         <ul class="ingredients__list">
                                             <li class="ingredients__item">
                                                 <div class="ingredients__left">
@@ -213,7 +212,10 @@
                                                 </div>
                                                 <div class="ingredients__weight">80г</div>
                                             </li>
-                                        </ul>                                        
+                                        </ul>
+                                        <div class="ingredients__close">
+                                            <img src="content/slider/close.png" alt="close image" class="close-img">
+                                        </div>                                        
                                     </div>
                                 </div>                            
                             </div>

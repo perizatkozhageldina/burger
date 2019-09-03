@@ -88,27 +88,33 @@
     left: -9999px;
     opacity: 0;
     transition: opacity .4s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
     @include phones {
-        padding: 5px;
+        width: 250px;
+        padding: 10px;
+    }
+
+    @include smallscreen {
         width: 200px;
+        padding: 5px;
     }
 }
 
 .ingredients__close {
-    right: 0;
-    top: 2px;
-    width: 32px; 
-    color: $orange;
+        display: none;
+        opacity: 0;
 
-    &:hover {
+    @include tablets {
+        display: block;
         opacity: 1;
-    }
+        margin: 10px 20px;
 
-    &:before {
-        //content: "\00d7";
-        position: absolute;
-        font-size: 50px;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -129,8 +135,8 @@
 }
 
 .ingredients__name {
-    margin-left: rem(30px);
-    margin-right: rem(30px);
+    margin-left: rem(20px);
+    margin-right: rem(20px);
 
     @include phones {
         margin-left: rem(20px);
