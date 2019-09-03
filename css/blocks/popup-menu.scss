@@ -13,10 +13,15 @@
 
 .close {
     position: absolute;
-    right: 20px;
-    top: 2px;
+    right: 30px;
+    top: 10px;
     width: 32px;   
     color: #fff;
+
+    @include phones {
+        right: 20px;
+        top: 2px;
+    }
 
     &:hover {
         opacity: 1;

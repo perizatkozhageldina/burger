@@ -1318,10 +1318,14 @@ button {
 
 .close {
   position: absolute;
-  right: 20px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
   width: 32px;
   color: #fff; }
+  @media screen and (max-width: 480px) {
+    .close {
+      right: 20px;
+      top: 2px; } }
   .close:hover {
     opacity: 1; }
   .close:before {
