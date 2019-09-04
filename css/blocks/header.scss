@@ -12,6 +12,7 @@
 .logo-icon {
     max-width: rem(92px);
     max-height: rem(92px);
+    z-index: $z-logo;
 }
 
 .hamburger-menu {
@@ -24,6 +25,7 @@
     
     @include tablets {
         display: flex;
+        margin-right: 20px;
     }
 }
 

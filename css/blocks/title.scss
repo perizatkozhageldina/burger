@@ -11,6 +11,9 @@
         &--white {
             color: white;
         }
+        &--orange {
+            color: $orange;
+        }
     }
     &--center {
         text-align: center;
@@ -19,5 +22,9 @@
     @include phones {
         font-size: rem(63px);
         margin-bottom: rem(20px); 
+    }
+
+    @include smallscreen {
+        font-size: rem(50px);
     }
 }
