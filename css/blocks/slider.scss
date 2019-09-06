@@ -17,9 +17,17 @@
     transform: rotate(-90deg);
 }
 
-.slider__main-content {
+.slider__list {
     display: flex;
-    align-items: center;
+}
+
+.slider__item {
+    display: none;
+
+    &--active {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .slider__container {
@@ -35,6 +43,12 @@
 
 .slider__left{
     position: relative;
+    margin-right: 20px;
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(20px);
+    }
 }
 
 .slider__right {
@@ -67,6 +81,10 @@
             left: 100%;
         }
         background: $orange;
+    }
+
+    @include tablets {
+        margin-bottom: rem(40px);
     }
 }
 
@@ -168,6 +186,10 @@
 }
 
 .slider__img {
+    max-width: 505px;
+}
+
+.slider__img {
     @include phones {
         max-width: 100%;
     }
@@ -205,10 +227,31 @@
     left: rem(13px);
 }
 
+.slider__title {
+
+    @include tablets {
+        font-size: rem(40px);
+        margin-bottom: rem(20px);
+    }
+
+    @include phones {
+        font-size: rem(30px);
+        margin-bottom: rem(10px);
+    }
+}
+
 .slider__text {
     color: white;
     @include ubunturegular();
     margin-bottom: rem(40px);
+
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+
+    @include phones {
+        margin-bottom: rem(20px);
+    }
 }
 
 .slider__order {

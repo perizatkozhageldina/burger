@@ -1306,7 +1306,8 @@ button {
     margin-right: 0; }
 
 .disable-scrolling {
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
 
 .popup-menu {
   background-color: #2f3234;
@@ -1396,13 +1397,20 @@ button {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
-.slider__main-content {
+.slider__list {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  display: flex; }
+
+.slider__item {
+  display: none; }
+  .slider__item--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .slider__container {
   display: -webkit-box;
@@ -1425,7 +1433,12 @@ button {
       align-items: center; } }
 
 .slider__left {
-  position: relative; }
+  position: relative;
+  margin-right: 20px; }
+  @media screen and (max-width: 768px) {
+    .slider__left {
+      margin-right: 0;
+      margin-bottom: 1.25rem; } }
 
 .slider__right {
   width: 100%; }
@@ -1461,6 +1474,9 @@ button {
     .ingredients:hover .ingredients__hover {
       opacity: 1;
       left: 100%; }
+  @media screen and (max-width: 768px) {
+    .ingredients {
+      margin-bottom: 2.5rem; } }
 
 .ingredients__text {
   color: white;
@@ -1558,6 +1574,9 @@ button {
 .slider__pic {
   max-width: 100%; }
 
+.slider__img {
+  max-width: 505px; }
+
 @media screen and (max-width: 480px) {
   .slider__img {
     max-width: 100%; } }
@@ -1594,11 +1613,27 @@ button {
   top: 3.75rem;
   left: 0.8125rem; }
 
+@media screen and (max-width: 768px) {
+  .slider__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem; } }
+
+@media screen and (max-width: 480px) {
+  .slider__title {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem; } }
+
 .slider__text {
   color: white;
   font-family: 'ubunturegular', Helvetica, sans-serif;
   font-weight: 300;
   margin-bottom: 2.5rem; }
+  @media screen and (max-width: 768px) {
+    .slider__text {
+      margin-bottom: 1.875rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__text {
+      margin-bottom: 1.25rem; } }
 
 .slider__order {
   display: -webkit-box;
