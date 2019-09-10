@@ -1193,7 +1193,10 @@ button {
       border-width: 0 4.5px 7px 4.5px;
       border-color: transparent transparent #f9b43b transparent; }
   .members__item--active .members__elem {
-    height: 9.375rem; }
+    min-height: 9.375rem; }
+    @media screen and (max-width: 768px) {
+      .members__item--active .members__elem {
+        min-height: 12.5rem; } }
 
 .members__name {
   font-family: 'gagalinregular', Helvetica, sans-serif;
@@ -1522,6 +1525,9 @@ button {
   position: absolute;
   top: 50%;
   left: -3.125rem; }
+  @media screen and (max-width: 768px) {
+    .arrow-left__icon {
+      left: -10px; } }
 
 .arrow-right__icon {
   width: 1.875rem;
@@ -1533,6 +1539,9 @@ button {
   position: absolute;
   top: 50%;
   right: -3.125rem; }
+  @media screen and (max-width: 768px) {
+    .arrow-right__icon {
+      right: -10px; } }
 
 .slider__list {
   display: -webkit-box;
@@ -1549,7 +1558,15 @@ button {
   align-items: center;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 6.25rem; }
+  @media screen and (max-width: 768px) {
+    .slider__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-bottom: 0; } }
 
 .slider__left {
   position: relative;
@@ -1567,6 +1584,9 @@ button {
   @media screen and (max-width: 480px) {
     .slider__right {
       padding: 0 2%; } }
+
+.slider__ingredients {
+  margin-bottom: 0; }
 
 .ingredients {
   display: block;
@@ -1596,6 +1616,9 @@ button {
   @media screen and (max-width: 768px) {
     .ingredients {
       margin-bottom: 2.5rem; } }
+  @media screen and (max-width: 480px) {
+    .ingredients {
+      margin-bottom: 0.625rem; } }
 
 .ingredients__text {
   color: white;
@@ -1697,7 +1720,7 @@ button {
   max-width: 31.5625rem; }
   @media screen and (max-width: 480px) {
     .slider__img {
-      max-width: 100%; } }
+      max-width: 18.75rem; } }
 
 .slider__weight {
   color: white;
@@ -1767,7 +1790,14 @@ button {
     .slider__order {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center;
+      margin-top: 6.25rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__order {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 0; } }
 
 .slider__price {
   display: -webkit-box;

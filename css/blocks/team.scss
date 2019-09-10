@@ -64,11 +64,11 @@
         }
 
         .members__elem {
-            height: rem(150px);
+            min-height: rem(150px);
 
-            // @include tablets {
-            //     min-height: rem(200px);
-            // }
+            @include tablets {
+                min-height: rem(200px);
+            }
         }
     }
 }
