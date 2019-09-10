@@ -1,7 +1,8 @@
 .section__form {
     background: url('../content/section__form/bg.png') center center / cover no-repeat;
     color: white;
-    @include ubunturegular();
+    @include ubunturegular(); 
+    position: relative;
 }
 
 .form__elem {
@@ -195,4 +196,56 @@
 
   .error {
     color: red;
+  }
+
+  .form__modal {
+    background-color: $black;
+    opacity: .97;
+    height: 100vh;
+    width: 100vw;    
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__block {
+    position: relative;
+    width: rem(500px);
+    min-height: rem(100px);
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+
+    @include phones {
+      width: 50%;      
+    }
+  }
+
+  .modal__close {
+    position: absolute;
+    cursor: pointer;
+    right: rem(40px);
+    top: rem(-10px);
+    color: $red;
+
+    @include phones {
+      right: 30px;
+      top: -10px;
+    }
+
+    &:before {
+      content: "\00d7";
+      position: absolute;
+      font-size: rem(50px);
+      padding: 0;
+    }
   }

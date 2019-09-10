@@ -27,6 +27,25 @@ menuList.addEventListener("click", function(e){
 });
 //<<< pop-up menu
 
+//>>>
+
+const slide = (function(){
+    const left = document.querySelector('.arrow-left');
+    const right = document.querySelector('.arrow-right');
+    const slider = document.querySelector('.slider__list');
+
+    right.addEventListener("click", function() {
+        slider.appendChild(slider.firstElementChild);
+    });
+
+    left.addEventListener("click", function() {
+        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+    });
+});
+slide();
+
+//<<<
+
 //>>> team section
 
 let teamSection = () => {
@@ -77,40 +96,71 @@ let menuSection = () => {
     })
 };
 menuSection();
-
-// let foodItem = document.querySelectorAll('#food__item');
-
-// for (let i=0; i<foodItem.length; i++) {
-//     foodItem[i].addEventListener("click", function(e){
-//         e.preventDefault();
-//         foodItem[i].classList.toggle("food__item--active");
-//     });
-// }
 //<<< menu section
+
+//>>> reviews section
+
+const reviewsList = document.querySelector('.reviews__list');
+const reviewsModal = document.querySelector('.reviews-modal');
+const reviewsClose = document.querySelector('.reviews-modal__close');
+const reviewsTitle = document.querySelector('.reviews-modal__title');
+const reviewsDesc = document.querySelector('.reviews-modal__desc');
+let title = "Константин Спилберг";
+let desc = "Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.";
+// console.log(reviewsClose);
+
+reviewsClose.addEventListener('click', function(e){
+    e.preventDefault();
+    reviewsModal.style.display = "none";
+    document.body.style.overflow = "initial";
+});
+
+reviewsList.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = e.target.closest('button');
+    if (!target) return;
+    reviewsModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    reviewsTitle.textContent = title;
+    reviewsDesc.textContent = desc;
+
+});
+
+//<<< reviews section
+
 //>>> form section
 
 const myForm = document.querySelector('#myForm');
 const orderButton = document.querySelector('#orderButton');
+let modal = document.querySelector('.form__modal');
+let close = document.querySelector('.modal__close');
+let message = document.querySelector('.modal__message');
+
+close.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.body.style.overflow = "initial";
+    modal.style.display = "none";
+});
 
 orderButton.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (validateForm(myForm)) {
-        const data = {
-            name: myForm.elements.name.value,
-            phone: myForm.elements.phone.value,
-            comment: myForm.elements.comment.value
-        };
+        let data = new FormData();
+        data.append("name", myForm.elements.name.value);
+        data.append("phone", myForm.elements.phone.value);
+        data.append("comment", myForm.elements.comment.value);
+        data.append("to","perizat.kozhageldina@nu.edu.kz");
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-        console.log(xhr);
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(data));
-        xhr.addEventListener ('onload', () => {
-            if (xhr.response.status == true) {
-                console.log('Все ок!');
-            };
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        xhr.send(data);
+        xhr.addEventListener ('load', () => {            
+            document.body.style.overflow = "hidden";
+            modal.style.display = "flex";
+            message.textContent = xhr.response.message;
         });
     }
 
