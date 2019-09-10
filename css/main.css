@@ -973,6 +973,9 @@ button {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.error {
+  color: red; }
+
 .fixed-menu {
   position: fixed;
   top: 5.9375rem;
@@ -1049,7 +1052,10 @@ button {
     margin-bottom: 0; }
   .members__item .members__elem {
     height: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s; }
   .members__item--active .members__name {
     color: #f9b43b; }
     .members__item--active .members__name::before {
@@ -1065,10 +1071,7 @@ button {
       border-width: 0 4.5px 7px 4.5px;
       border-color: transparent transparent #f9b43b transparent; }
   .members__item--active .members__elem {
-    min-height: 6.25rem; }
-    @media screen and (max-width: 768px) {
-      .members__item--active .members__elem {
-        min-height: 12.5rem; } }
+    height: 9.375rem; }
 
 .members__name {
   font-family: 'gagalinregular', Helvetica, sans-serif;
@@ -1381,6 +1384,9 @@ button {
   background-image: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%); }
 
+.slider__content {
+  overflow: hidden; }
+
 .arrow-left__icon {
   width: 1.875rem;
   height: 1.875rem;
@@ -1403,7 +1409,9 @@ button {
   display: flex; }
 
 .slider__item {
-  display: none; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .slider__item--active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1416,21 +1424,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  @media screen and (max-width: 768px) {
-    .slider__container {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; } }
 
 .slider__left {
   position: relative;
@@ -1576,10 +1576,9 @@ button {
 
 .slider__img {
   max-width: 505px; }
-
-@media screen and (max-width: 480px) {
-  .slider__img {
-    max-width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .slider__img {
+      max-width: 100%; } }
 
 .slider__weight {
   color: white;

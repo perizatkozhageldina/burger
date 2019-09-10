@@ -39,6 +39,7 @@
     .members__elem {
         height: 0;
         overflow: hidden;
+        transition: height .3s;
     }
 
     &--active {
@@ -63,11 +64,11 @@
         }
 
         .members__elem {
-            min-height: rem(100px);
+            height: rem(150px);
 
-            @include tablets {
-                min-height: rem(200px);
-            }
+            // @include tablets {
+            //     min-height: rem(200px);
+            // }
         }
     }
 }

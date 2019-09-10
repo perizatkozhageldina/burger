@@ -3,6 +3,10 @@
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
 }
 
+.slider__content {
+    overflow: hidden;
+}
+
 .arrow-left__icon {
     width: rem(30px);
     height: rem(30px);
@@ -22,7 +26,7 @@
 }
 
 .slider__item {
-    display: none;
+    display: flex;
 
     &--active {
         display: flex;
@@ -32,13 +36,8 @@
 
 .slider__container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-
-    @include tablets {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 .slider__left{
@@ -187,9 +186,7 @@
 
 .slider__img {
     max-width: 505px;
-}
 
-.slider__img {
     @include phones {
         max-width: 100%;
     }
