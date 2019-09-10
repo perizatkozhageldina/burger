@@ -1547,6 +1547,8 @@ button {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 100%; }
 
 .slider__left {

@@ -39,6 +39,7 @@
 .slider__item {
     display: flex;
     align-items: flex-end;
+    flex-shrink: 0;
     width: 100%;
 }
 
