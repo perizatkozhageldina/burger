@@ -3,11 +3,26 @@
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
 }
 
+.slider__container {
+    position: relative;
+}
+
+.slider__content {
+    overflow: hidden;
+}
+
 .arrow-left__icon {
     width: rem(30px);
     height: rem(30px);
     transform: rotate(90deg);
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: rem(-50px);
+
+    @include tablets {
+        left: -10px;
+    }
 }
 
 .arrow-right__icon {
@@ -15,26 +30,41 @@
     height: rem(30px);
     cursor: pointer;
     transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    right: rem(-50px);
+
+    @include tablets {
+        right: -10px;
+    }
 }
 
-.slider__main-content {
+.slider__list {
     display: flex;
-    align-items: center;
+    position: relative;
 }
 
-.slider__container {
+.slider__item {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    padding-bottom: rem(100px);
 
     @include tablets {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding-bottom: 0;
     }
 }
 
 .slider__left{
     position: relative;
+    margin-right: 20px;
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(20px);
+    }
 }
 
 .slider__right {
@@ -47,6 +77,10 @@
     @include phones{
         padding: 0 2%;        
     }
+}
+
+.slider__ingredients {
+    margin-bottom: 0;
 }
 
 .ingredients {
@@ -67,6 +101,14 @@
             left: 100%;
         }
         background: $orange;
+    }
+
+    @include tablets {
+        margin-bottom: rem(40px);
+    }
+
+    @include phones {
+        margin-bottom: rem(10px);
     }
 }
 
@@ -168,8 +210,10 @@
 }
 
 .slider__img {
+    max-width: rem(505px);
+
     @include phones {
-        max-width: 100%;
+        max-width: rem(300px);
     }
 }
 
@@ -205,10 +249,31 @@
     left: rem(13px);
 }
 
+.slider__title {
+
+    @include tablets {
+        font-size: rem(40px);
+        margin-bottom: rem(20px);
+    }
+
+    @include phones {
+        font-size: rem(30px);
+        margin-bottom: rem(10px);
+    }
+}
+
 .slider__text {
     color: white;
     @include ubunturegular();
     margin-bottom: rem(40px);
+
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+
+    @include phones {
+        margin-bottom: rem(20px);
+    }
 }
 
 .slider__order {
@@ -218,6 +283,12 @@
 
     @include tablets {
         justify-content: center;
+        margin-top: rem(100px);
+    }
+
+    @include phones {
+        justify-content: center;
+        margin-top: 0;
     }
 }
 
