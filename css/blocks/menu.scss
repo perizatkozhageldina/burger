@@ -28,13 +28,13 @@
             color: $yellow;
         }
         .food__desc {
-            min-width: rem(500px);
+            width: rem(500px);
             max-height: 100%;
             background: #4c4e50;
             opacity: .8;
 
             @include phones {
-                min-width: rem(200px);
+                width: 100%;
             }
         }
     }

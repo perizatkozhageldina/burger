@@ -1293,13 +1293,13 @@ button {
   .food__item--active .food__title {
     color: #f9b43b; }
   .food__item--active .food__desc {
-    min-width: 31.25rem;
+    width: 31.25rem;
     max-height: 100%;
     background: #4c4e50;
     opacity: .8; }
     @media screen and (max-width: 480px) {
       .food__item--active .food__desc {
-        min-width: 12.5rem; } }
+        width: 100%; } }
 
 .food__title {
   font-family: 'gagalinregular', Helvetica, sans-serif;
@@ -1515,19 +1515,29 @@ button {
 .slider__content {
   overflow: hidden; }
 
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: -3.125rem; }
+  @media screen and (max-width: 768px) {
+    .arrow-left {
+      left: -10px; } }
+
 .arrow-left__icon {
   width: 1.875rem;
   height: 1.875rem;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  cursor: pointer;
+  cursor: pointer; }
+
+.arrow-right {
   position: absolute;
   top: 50%;
-  left: -3.125rem; }
+  right: -3.125rem; }
   @media screen and (max-width: 768px) {
-    .arrow-left__icon {
-      left: -10px; } }
+    .arrow-right {
+      right: -10px; } }
 
 .arrow-right__icon {
   width: 1.875rem;
@@ -1535,13 +1545,7 @@ button {
   cursor: pointer;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 50%;
-  right: -3.125rem; }
-  @media screen and (max-width: 768px) {
-    .arrow-right__icon {
-      right: -10px; } }
+  transform: rotate(-90deg); }
 
 .slider__list {
   display: -webkit-box;
@@ -1585,9 +1589,6 @@ button {
     .slider__right {
       padding: 0 2%; } }
 
-.slider__ingredients {
-  margin-bottom: 0; }
-
 .ingredients {
   display: block;
   width: 5.625rem;
@@ -1608,9 +1609,9 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative; }
-  .ingredients:hover {
+  .ingredients--active {
     background: #e45028; }
-    .ingredients:hover .ingredients__hover {
+    .ingredients--active .ingredients__hover {
       opacity: 1;
       left: 100%; }
   @media screen and (max-width: 768px) {
@@ -1658,8 +1659,7 @@ button {
       padding: 5px; } }
 
 .ingredients__close {
-  display: none;
-  opacity: 0; }
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .ingredients__close {
       display: block;

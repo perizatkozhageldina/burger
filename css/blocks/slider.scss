@@ -11,11 +11,7 @@
     overflow: hidden;
 }
 
-.arrow-left__icon {
-    width: rem(30px);
-    height: rem(30px);
-    transform: rotate(90deg);
-    cursor: pointer;
+.arrow-left {
     position: absolute;
     top: 50%;
     left: rem(-50px);
@@ -25,11 +21,14 @@
     }
 }
 
-.arrow-right__icon {
+.arrow-left__icon {
     width: rem(30px);
     height: rem(30px);
+    transform: rotate(90deg);
     cursor: pointer;
-    transform: rotate(-90deg);
+}
+
+.arrow-right {
     position: absolute;
     top: 50%;
     right: rem(-50px);
@@ -37,6 +36,13 @@
     @include tablets {
         right: -10px;
     }
+}
+
+.arrow-right__icon {
+    width: rem(30px);
+    height: rem(30px);
+    cursor: pointer;
+    transform: rotate(-90deg);
 }
 
 .slider__list {
@@ -79,10 +85,6 @@
     }
 }
 
-.slider__ingredients {
-    margin-bottom: 0;
-}
-
 .ingredients {
     display: block;
     width: rem(90px);
@@ -95,7 +97,7 @@
     justify-content: center;
     position: relative;
 
-    &:hover {
+    &--active {
         .ingredients__hover {
             opacity: 1;
             left: 100%;
@@ -146,8 +148,7 @@
 }
 
 .ingredients__close {
-        display: none;
-        opacity: 0;
+    cursor: pointer;
 
     @include tablets {
         display: block;
