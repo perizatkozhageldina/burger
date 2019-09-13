@@ -302,7 +302,9 @@ $(function(){
 
             $('.fixed-menu').append(dot);
         });
+        $('.fixed-menu__item').first().addClass('fixed-menu__item--active');
     };
+
     generateDots();
 
     var coloringDots = function (index) {
@@ -313,6 +315,10 @@ $(function(){
             .siblings()
             .removeClass('fixed-menu__item--active')
     };
+
+    $('.fixed-menu__item').on('click', function(e){
+                
+    });
 
     $('.wrapper').on('wheel', function(e){
 
@@ -326,6 +332,8 @@ $(function(){
             prevIndex = prevSection.index(),
             deltaY = e.originalEvent.deltaY,
             duration = 500;
+
+            coloringDots(activeIndex); 
 
             if (deltaY > 0) {
                 if (nextSection.length) {
@@ -346,8 +354,6 @@ $(function(){
                     });
                 };
             };  
-            coloringDots(activeIndex); 
     });
 });
-
 //<<<one page scroll

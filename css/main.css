@@ -1110,8 +1110,10 @@ button {
     .fixed-menu {
       display: none; } }
 
-.fixed-menu__item--active .fixed-menu__dot {
-  border-color: white; }
+.fixed-menu__item {
+  cursor: pointer; }
+  .fixed-menu__item--active .fixed-menu__dot {
+    border-color: white; }
 
 .fixed-menu__dot {
   width: 1rem;
