@@ -648,15 +648,18 @@ button {
     .title {
       font-size: 3.125rem; } }
 
-.icon-arrow {
-  max-width: 1.8125rem;
+.scroll-down-btn {
   display: block;
   position: absolute;
-  bottom: 1%;
+  bottom: 5%;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%); }
+
+.icon-arrow {
+  max-width: 1.8125rem;
+  max-height: 1.8125rem; }
 
 .best {
   background: url("../content/best/bg.png") center center/cover no-repeat; }

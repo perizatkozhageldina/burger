@@ -1,8 +1,12 @@
-.icon-arrow {
-    max-width: rem(29px);
+.scroll-down-btn {
     display: block;
     position: absolute;
-    bottom: 1%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%);
+}
+
+.icon-arrow {
+    max-width: rem(29px);
+    max-height: rem(29px);
 }

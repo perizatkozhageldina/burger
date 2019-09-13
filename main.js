@@ -237,53 +237,117 @@ orderButton.addEventListener('click', function(e) {
 
 $(function(){
 
-    $(document).on('wheel', function(e){
+    // $(document).on('wheel', function(e){
+
+    //     var $this = $(this),
+    //         sections = $this.find('.section'),
+    //         activeSection = sections.filter('.active'),
+    //         nextItem = activeSection.next(),
+    //         nextIndex = nextItem.index(),
+    //         prevItem = activeSection.prev(),
+    //         prevIndex = prevItem.index(),
+    //         container = $this.find('.wrapper'),
+    //         deltaY = e.originalEvent.deltaY,
+    //         duration = 500,
+    //         dotIndex;
+
+    //         if (deltaY > 0) {
+    //             if (nextItem.length) {
+    //                 container.animate({
+    //                     'top' : -nextIndex*100 + '%'
+    //                 }, duration, function () {
+    //                     activeSection.removeClass('active');
+    //                     nextItem.addClass('active');
+    //                     coloringDots();
+    //                 });       
+    //             };
+    //         } else if (deltaY < 0) {
+    //             if (prevItem.length) {
+    //                 container.animate({
+    //                     'top' : prevIndex*100 + '%'
+    //                 }, duration, function () {
+    //                     activeSection.removeClass('active');
+    //                     prevItem.addClass('active');
+    //                     coloringDots();
+    //                 });
+    //             };
+    //         };
+
+    //         dotIndex = activeSection.index();
+           
+    //         var coloringDots = function (index) {
+    //             $(document)
+    //                 .find('.fixed-menu__item')
+    //                 .eq(index)
+    //                 .addClass('fixed-menu__item--active')
+    //                 .siblings()
+    //                 .removeClass('fixed-menu__item--active')
+    //         }
+            
+    //         coloringDots(dotIndex);
+
+    // });
+});
+
+$(function(){
+
+    var generateDots = function(){
+        $(".section").each(function(){
+            var dot = $('<li>', {
+                attr: {
+                    class: 'fixed-menu__item'
+                },
+                html: '<div class="fixed-menu__dot"></div>'
+            });
+
+            $('.fixed-menu').append(dot);
+        });
+    };
+    generateDots();
+
+    var coloringDots = function (index) {
+        $('.fixed-menu')
+            .find('.fixed-menu__item')
+            .eq(index)
+            .addClass('fixed-menu__item--active')
+            .siblings()
+            .removeClass('fixed-menu__item--active')
+    };
+
+    $('.wrapper').on('wheel', function(e){
 
         var $this = $(this),
             sections = $this.find('.section'),
             activeSection = sections.filter('.active'),
-            nextItem = activeSection.next(),
-            nextIndex = nextItem.index(),
-            prevItem = activeSection.prev(),
-            prevIndex = prevItem.index(),
-            container = $this.find('.wrapper'),
+            activeIndex = activeSection.index(),
+            nextSection = activeSection.next();
+            nextIndex = nextSection.index(),
+            prevSection = activeSection.prev(),
+            prevIndex = prevSection.index(),
             deltaY = e.originalEvent.deltaY,
-            duration = 500,
-            dotIndex;
+            duration = 500;
 
             if (deltaY > 0) {
-                if (nextItem.length) {
-                    container.animate({
+                if (nextSection.length) {
+                    $this.animate({
                         'top' : -nextIndex*100 + '%'
-                    }, duration, function () {
+                    }, duration, function(){
                         activeSection.removeClass('active');
-                        nextItem.addClass('active');
-                    });       
-                };
-            } else if (deltaY < 0) {
-                if (prevItem.length) {
-                    container.animate({
-                        'top' : prevIndex*100 + '%'
-                    }, duration, function () {
-                        activeSection.removeClass('active');
-                        prevItem.addClass('active');
+                        nextSection.addClass('active');
                     });
                 };
-            };
-
-            dotIndex = activeSection.index();
-           
-            var coloringDots = function (index) {
-                $(document)
-                    .find('.fixed-menu__item')
-                    .eq(index)
-                    .addClass('fixed-menu__item--active')
-                    .siblings()
-                    .removeClass('fixed-menu__item--active')
-            }
-            
-            coloringDots(dotIndex);
-
+            } else {
+                if (prevSection.length) {
+                    $this.animate({
+                        'top' : -prevIndex*100 + '%'
+                    }, duration, function(){
+                        activeSection.removeClass('active');
+                        prevSection.addClass('active');
+                    });
+                };
+            };  
+            coloringDots(activeIndex); 
     });
 });
+
 //<<<one page scroll
