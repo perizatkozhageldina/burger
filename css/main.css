@@ -651,7 +651,7 @@ button {
 .scroll-down-btn {
   display: block;
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -1304,7 +1304,8 @@ button {
     opacity: .8; }
     @media screen and (max-width: 480px) {
       .food__item--active .food__desc {
-        width: 100%; } }
+        width: 100%;
+        overflow-y: scroll; } }
 
 .food__title {
   font-family: 'gagalinregular', Helvetica, sans-serif;
@@ -1343,8 +1344,31 @@ button {
   font-size: 0.875rem; }
 
 .map {
-  background: url("../content/contacts/map.png") center center/cover no-repeat;
   min-height: 100vh; }
+
+.map__hint {
+  color: #2f3234;
+  font-weight: bold;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  background: #e45028;
+  opacity: .9; }
+
+.map__balloon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  background-color: #e45028;
+  padding: 0.9375rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.875rem;
+  text-align: center;
+  color: white;
+  font-weight: bold; }
 
 .footer {
   background: #000;
@@ -1819,3 +1843,7 @@ button {
 .slider__money {
   font-size: 1.875rem;
   margin-bottom: 0; }
+
+.howwework {
+  background: url("../../content/howwework/bg.png") center center/cover no-repeat;
+  text-align: center; }

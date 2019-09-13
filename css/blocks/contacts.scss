@@ -4,8 +4,29 @@
 }
 
 .map {
-    background: url('../content/contacts/map.png') center center / cover no-repeat;
     min-height: 100vh;
+}
+
+.map__hint {
+    color: $black;
+    font-weight: bold;
+    padding: rem(10px);
+    font-size: rem(14px);
+    border-radius: 5px;
+    background: $orange;
+    opacity: .9;
+}
+
+.map__balloon {
+    display: flex;
+    border-radius: 5px;
+    background-color: $orange;
+    padding: rem(15px);
+    align-items: center;
+    font-size: rem(14px);
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 .footer {
