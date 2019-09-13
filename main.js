@@ -1,3 +1,4 @@
+$(function(){
 //>>> pop-up menu
 let popupMenu = document.querySelector('#popup-menu');
 let openIcon = document.querySelector('#hamburger-menu');
@@ -28,8 +29,6 @@ menuList.addEventListener("click", function(e){
 //<<< pop-up menu
 
 //>>> slider
-
-$(function(){
 
     var moveSlider = function (container, slideNum) {
         var 
@@ -73,7 +72,6 @@ $(function(){
 
         moveSlider(container, reqItem);
     });
-});
 
 //ingredients mouseenter/mouseleave
 
@@ -229,67 +227,10 @@ orderButton.addEventListener('click', function(e) {
         field.nextElementSibling.textContent = field.validationMessage;
         return field.checkValidity();
     }
-
 });
 
 //<<< form section
 //>>> one page scroll
-
-$(function(){
-
-    // $(document).on('wheel', function(e){
-
-    //     var $this = $(this),
-    //         sections = $this.find('.section'),
-    //         activeSection = sections.filter('.active'),
-    //         nextItem = activeSection.next(),
-    //         nextIndex = nextItem.index(),
-    //         prevItem = activeSection.prev(),
-    //         prevIndex = prevItem.index(),
-    //         container = $this.find('.wrapper'),
-    //         deltaY = e.originalEvent.deltaY,
-    //         duration = 500,
-    //         dotIndex;
-
-    //         if (deltaY > 0) {
-    //             if (nextItem.length) {
-    //                 container.animate({
-    //                     'top' : -nextIndex*100 + '%'
-    //                 }, duration, function () {
-    //                     activeSection.removeClass('active');
-    //                     nextItem.addClass('active');
-    //                     coloringDots();
-    //                 });       
-    //             };
-    //         } else if (deltaY < 0) {
-    //             if (prevItem.length) {
-    //                 container.animate({
-    //                     'top' : prevIndex*100 + '%'
-    //                 }, duration, function () {
-    //                     activeSection.removeClass('active');
-    //                     prevItem.addClass('active');
-    //                     coloringDots();
-    //                 });
-    //             };
-    //         };
-
-    //         dotIndex = activeSection.index();
-           
-    //         var coloringDots = function (index) {
-    //             $(document)
-    //                 .find('.fixed-menu__item')
-    //                 .eq(index)
-    //                 .addClass('fixed-menu__item--active')
-    //                 .siblings()
-    //                 .removeClass('fixed-menu__item--active')
-    //         }
-            
-    //         coloringDots(dotIndex);
-
-    // });
-});
-
-$(function(){
 
     var generateDots = function(){
         $(".section").each(function(){
@@ -316,10 +257,6 @@ $(function(){
             .removeClass('fixed-menu__item--active')
     };
 
-    $('.fixed-menu__item').on('click', function(e){
-                
-    });
-
     $('.wrapper').on('wheel', function(e){
 
         var $this = $(this),
@@ -332,6 +269,8 @@ $(function(){
             prevIndex = prevSection.index(),
             deltaY = e.originalEvent.deltaY,
             duration = 500;
+            
+            console.log(activeSection);
 
             coloringDots(activeIndex); 
 
