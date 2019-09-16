@@ -1,4 +1,116 @@
 .howwework {
-    background: url('../../content/howwework/bg.png') center center / cover no-repeat;
+    background: url('../content/howwework/bg.png') center center / cover no-repeat;
     text-align: center;
+}
+
+.player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.play {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-gray {
+    height: rem(25px);
+}
+
+.play-icon {
+    fill: white;
+    width: rem(150px);
+    height: rem(150px);
+
+    &--gray {
+        fill: gray;
+        width: rem(30px);
+        height: rem(25px);
+        cursor: pointer;
+    }
+}
+
+.toolbar {
+    height: rem(35px);
+    display: flex;
+    align-items: center;
+    background: $black;
+}
+
+.regulator {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.vol {
+    height: rem(25px);
+    width: rem(25px);
+    margin: 0 rem(10px);
+}
+
+.volume-icon {
+    fill: gray;
+    width: rem(30px);
+    height: rem(25px);
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    margin-right: rem(10px);
+}
+
+.regulator__line {
+    cursor: pointer;
+    background-color: gray;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 1px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background: gray;
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+    }
+}
+
+.volume__line {
+    cursor: pointer;
+    width: rem(58px);
+    background-color: gray;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 1px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background: gray;
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+    }
 }

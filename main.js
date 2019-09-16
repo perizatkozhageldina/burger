@@ -1,4 +1,4 @@
-$(function(){
+$().ready(function(){
 //>>> pop-up menu
 let popupMenu = document.querySelector('#popup-menu');
 let openIcon = document.querySelector('#hamburger-menu');
@@ -294,7 +294,7 @@ orderButton.addEventListener('click', function(e) {
             };
         };  
     });
-});
+
 //<<<one page scroll
 //>>> contacts
 
@@ -307,7 +307,7 @@ var placemarks = [
         hintContent: '<div class="map__hint">ул.Литераторов д.19</div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 100px;" alt="Burger"/>',
+            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 70px;" alt="Burger"/>',
             'Самые вкусные бургеры у нас! </br>Заходите по адресу: </br>ул.Литераторов д.19',
             '</div>'
         ]
@@ -318,7 +318,7 @@ var placemarks = [
         hintContent: '<div class="map__hint">Малый проспект В О, д.64</div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 100px;" alt="Burger"/>',
+            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 70px;" alt="Burger"/>',
             'Самые вкусные бургеры у нас! </br>Заходите по адресу: </br>Малый проспект В О, д.64',
             '</div>'
         ]
@@ -329,7 +329,7 @@ var placemarks = [
         hintContent: '<div class="map__hint">наб. реки Фонтанки д.19/div>',
         balloonContent: [
             '<div class="map__balloon">',
-            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 100px;" alt="Burger"/>',
+            '<img class="map__burger--img" src="/content/main/burger.png" style="max-height: 70px;" alt="Burger"/>',
             'Самые вкусные бургеры у нас! </br>Заходите по адресу: </br>наб. реки Фонтанки д.19',
             '</div>'
         ]
@@ -363,7 +363,8 @@ function init () {
             {
                 href: '/content/main/burger.png',
                 size: [100,100],
-                offset: [-50,-50]
+                offset: [-50,-50],
+                height: [10]
             }
         ],
         clusterIconContentLayout: null
@@ -374,3 +375,5 @@ function init () {
     //map.geoObjects.add(placemark);
 }
 //<<< contacts
+
+});

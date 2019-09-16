@@ -833,7 +833,34 @@
         <div class="section howwework">
             <div class="container">
                 <div class="title title--color--black howwework-title">Как мы работаем</div>
-                <div class="player"></div>
+                <div class="player">
+                    <video id="video" poster="content/howwework/video-poster.png" class="video">
+                        <source src="content/howwework/video.mp4" type="video/mp4"></source>
+                    </video>
+                    <div class="play">
+                        <svg class="play-icon">
+                            <use xlink:href="content/sprite.svg#play"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <div class="regulator">
+                        <div class="play-gray">
+                            <svg class="play-icon--gray">
+                                <use xlink:href="content/sprite.svg#play"></use>
+                            </svg>
+                        </div>
+                        <input type="range" class="regulator__line">
+                    </div>
+                    <div class="volume">
+                        <div class="vol">
+                            <svg class="volume-icon">
+                                <use xlink:href="content/sprite.svg#volume"></use>
+                            </svg>
+                        </div>
+                        <input type="range" class="volume__line">
+                    </div>
+                </div>
             </div>
         </div>
         <section class="section section__form">
