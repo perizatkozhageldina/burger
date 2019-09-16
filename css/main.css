@@ -1866,6 +1866,18 @@ button {
   -o-object-fit: cover;
   object-fit: cover; }
 
+.pause {
+  display: none; }
+  .pause--active {
+    display: block;
+    height: 1.5625rem; }
+
+.pause-icon {
+  fill: gray;
+  width: 1.875rem;
+  height: 1.5625rem;
+  cursor: pointer; }
+
 .play {
   cursor: pointer;
   position: absolute;
@@ -1874,9 +1886,13 @@ button {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+  .play--active {
+    display: none; }
 
 .play-gray {
   height: 1.5625rem; }
+  .play-gray--active {
+    display: none; }
 
 .play-icon {
   fill: white;
@@ -1888,7 +1904,7 @@ button {
     height: 1.5625rem;
     cursor: pointer; }
 
-.toolbar {
+.controls {
   height: 2.1875rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1909,7 +1925,13 @@ button {
   -ms-flex: 1;
   flex: 1; }
 
-.vol {
+.timer {
+  color: #fff;
+  font-family: 'ubunturegular', Helvetica, sans-serif;
+  font-weight: 300;
+  margin-left: 1.25rem; }
+
+.sound {
   height: 1.5625rem;
   width: 1.5625rem;
   margin: 0 0.625rem; }
@@ -1937,7 +1959,8 @@ button {
   -moz-appearance: none;
   appearance: none;
   height: 4px;
-  border-radius: 1px; }
+  border-radius: 1px;
+  outline: none; }
   .regulator__line::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -1955,7 +1978,8 @@ button {
   -moz-appearance: none;
   appearance: none;
   height: 4px;
-  border-radius: 1px; }
+  border-radius: 1px;
+  outline: none; }
   .volume__line::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;

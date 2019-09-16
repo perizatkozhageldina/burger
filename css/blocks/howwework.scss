@@ -18,16 +18,40 @@
     object-fit: cover;
 }
 
+.pause {
+    display: none;
+
+    &--active {
+        display: block;
+        height: rem(25px);
+    }
+}
+
+.pause-icon {
+    fill: gray;
+    width: rem(30px);
+    height: rem(25px);
+    cursor: pointer;
+}
+
 .play {
     cursor: pointer;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    &--active {
+        display: none;
+    }
 }
 
 .play-gray {
     height: rem(25px);
+
+    &--active {
+        display: none;
+    }
 }
 
 .play-icon {
@@ -43,7 +67,7 @@
     }
 }
 
-.toolbar {
+.controls {
     height: rem(35px);
     display: flex;
     align-items: center;
@@ -56,7 +80,13 @@
     flex: 1;
 }
 
-.vol {
+.timer {
+    color: #fff;
+    @include ubunturegular();
+    margin-left: rem(20px);
+}
+
+.sound {
     height: rem(25px);
     width: rem(25px);
     margin: 0 rem(10px);
@@ -83,6 +113,7 @@
     appearance: none;
     height: 4px;
     border-radius: 1px;
+    outline: none;
 
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -103,6 +134,7 @@
     appearance: none;
     height: 4px;
     border-radius: 1px;
+    outline: none;
 
     &::-webkit-slider-thumb {
         -webkit-appearance: none;

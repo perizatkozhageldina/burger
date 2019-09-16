@@ -837,28 +837,33 @@
                     <video id="video" poster="content/howwework/video-poster.png" class="video">
                         <source src="content/howwework/video.mp4" type="video/mp4"></source>
                     </video>
-                    <div class="play">
+                    <div class="play" id="play">
                         <svg class="play-icon">
                             <use xlink:href="content/sprite.svg#play"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="toolbar">
+                <div class="controls">
                     <div class="regulator">
-                        <div class="play-gray">
+                        <div class="play-gray" id="play-gray">
                             <svg class="play-icon--gray">
                                 <use xlink:href="content/sprite.svg#play"></use>
                             </svg>
                         </div>
-                        <input type="range" class="regulator__line">
+                        <div class="pause" id="pause">
+                            <svg class="pause-icon">
+                                <use xlink:href="content/sprite.svg#pause"></use>
+                            </svg>
+                        </div>
+                        <input type="range" class="regulator__line" id="regulator__line">
                     </div>
                     <div class="volume">
-                        <div class="vol">
+                        <div class="sound" id="sound">
                             <svg class="volume-icon">
                                 <use xlink:href="content/sprite.svg#volume"></use>
                             </svg>
                         </div>
-                        <input type="range" class="volume__line">
+                        <input type="range" class="volume__line" id="volume__line">
                     </div>
                 </div>
             </div>
