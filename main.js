@@ -326,66 +326,126 @@ orderButton.addEventListener('click', function(e) {
 //<<< form section
 //>>> one page scroll
 
-    var generateDots = function(){
-        $(".section").each(function(){
-            var dot = $('<li>', {
-                attr: {
-                    class: 'fixed-menu__item'
-                },
-                html: '<div class="fixed-menu__dot"></div>'
+    const sections = $('.section');
+    const display = $('.maincontent');
+    let inscroll = false;
+
+    const md = new MobileDetect(window.navigator.userAgent);
+    const isMobile = md.mobile();
+
+    const countPosition = sectionEq => {
+        return `${sectionEq * -100}%`;
+    }
+
+    const switchActiveClass = (elems, elemEq) => {
+        elems
+        .eq(elemEq)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+    };
+
+    const unBlockScroll = () => {
+        const transitionDuration = 1000;
+        const touchScrollInertionTime = 300;
+        setTimeout(() => {
+            inscroll = false;
+        }, transitionDuration + touchScrollInertionTime);
+    };
+
+    const performTransition = sectionEq => {
+        if (inscroll) return;
+            inscroll = true;
+            const position = countPosition(sectionEq);
+            const switchFixedMenuActiveClass = () => switchActiveClass($('.fixed-menu__item'), sectionEq);
+
+            switchFixedMenuActiveClass();
+
+            switchActiveClass(sections, sectionEq);
+
+            display.css({
+                transform: `translateY(${position})`
             });
 
-            $('.fixed-menu').append(dot);
-        });
-        $('.fixed-menu__item').first().addClass('fixed-menu__item--active');
+            unBlockScroll();
     };
 
-    generateDots();
+    const scrollViewport = direction => {
+        const activeSection  = sections.filter('.active');
+        const nextSection = activeSection.next();
+        const prevSection = activeSection.prev();
 
-    var coloringDots = function (index) {
-        $('.fixed-menu')
-            .find('.fixed-menu__item')
-            .eq(index)
-            .addClass('fixed-menu__item--active')
-            .siblings()
-            .removeClass('fixed-menu__item--active')
-    };
+        if (direction === 'next' && nextSection.length) {
+            performTransition(nextSection.index());
+        }
 
-    $('.wrapper').on('wheel', function(e){
+        if (direction === 'prev' && prevSection.length) {
+            performTransition(prevSection.index());
+        }
+    }
 
-        var $this = $(this),
-            sections = $this.find('.section'),
-            activeSection = sections.filter('.active'),
-            activeIndex = activeSection.index(),
-            nextSection = activeSection.next();
-            nextIndex = nextSection.index(),
-            prevSection = activeSection.prev(),
-            prevIndex = prevSection.index(),
-            deltaY = e.originalEvent.deltaY,
-            duration = 500;
+    $(document).on('wheel', e => {
+        const deltaY = e.originalEvent.deltaY;
+        const direction = deltaY < 0 ? 'prev' : 'next';
 
-            coloringDots(activeIndex); 
-
-        if (deltaY > 0) {
-            if (nextSection.length) {
-                $this.animate({
-                    'top' : -nextIndex*100 + '%'
-                }, duration, function(){
-                    activeSection.removeClass('active');
-                    nextSection.addClass('active');
-                });
-            };
-        } else {
-            if (prevSection.length) {
-                $this.animate({
-                    'top' : -prevIndex*100 + '%'
-                }, duration, function(){
-                    activeSection.removeClass('active');
-                    prevSection.addClass('active');
-                });
-            };
-        };  
+        scrollViewport(direction);
     });
+
+    $(document).on('keydown', e => {
+        const tagName = e.target.tagName.toLowerCase();
+        const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+
+        if (userTypingInInputs) return;
+            switch(e.keyCode) {
+                case 38: 
+                scrollViewport('prev');
+                break;
+                case 40: //next
+                scrollViewport('next');
+                break;
+                case 36:
+                performTransition(0);
+                break;
+                case 35:
+                performTransition(8);
+                break;
+            }
+    });
+
+    $('[data-scroll-to').on('click', e => {
+        e.preventDefault();
+
+        const target = parseInt($(e.currentTarget).attr("data-scroll-to"));
+
+        performTransition(target);
+
+    });
+
+    if (isMobile) {
+        window.addEventListener (
+            'touchmove', 
+            e => {
+            e.preventDefault();
+        },
+        { passive: false}
+        );
+
+        $('.wrapper').on('touchmove', e => {
+            e.preventDefault();
+        });
+
+        $('body').swipe({
+            swipe: function(event, direction) {
+                let scrollDirection;
+                
+                if (direction === 'up') scrollDirection = 'next';
+                if (direction === 'down') scrollDirection = 'prev';
+    
+                scrollViewport(scrollDirection);
+            }
+        });
+    }
+   
 
 //<<<one page scroll
 //>>> contacts

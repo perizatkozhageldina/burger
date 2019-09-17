@@ -11,14 +11,6 @@
 
 .fixed-menu__item {
     cursor: pointer;
-    &--active {
-        .fixed-menu__dot {
-            border-color:white;
-        }
-    }
-}
-
-.fixed-menu__dot {
     width: rem(16px);
     height: rem(16px);
     border-radius: 50%;
@@ -37,4 +29,8 @@
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.fixed-menu__item.active {
+    border-color: white;
 }
