@@ -1,0 +1,75 @@
+.menu {
+    background: url('content/food/bg.png') center center / cover no-repeat;
+    position: relative;   
+}
+
+.menu__title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.food {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.food__list {
+    display: flex;
+    height: 100%;
+}
+
+.food__item {
+    display: flex;
+    height: 100%;
+    &--active {
+        .food__title {
+            color: $yellow;
+        }
+        .food__desc {
+            width: rem(500px);
+            max-height: 100%;
+            background: #4c4e50;
+            opacity: .8;
+
+            @include phones {
+                width: 100%;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+
+.food__title {
+    @include gagalinregular();
+    color: white;
+    font-size: rem(40px);
+    height: 100%;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: rem(20px);
+    margin-bottom: 0;
+    white-space: nowrap;
+
+    @include phones {
+        font-size: rem(25px);
+        padding: rem(10px);
+    }
+}
+
+.food__desc {
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.food__text {
+    color: white;
+    padding: rem(50px);
+
+    @include phones {
+        padding: rem(15px);
+    }
+}

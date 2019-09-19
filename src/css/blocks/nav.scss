@@ -1,0 +1,40 @@
+.nav {
+    margin-right: rem(15px);
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    margin-right: rem(15px);
+    &:after {
+        content: "";
+        width: rem(4px);
+        height: rem(4px);
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        margin-left: rem(15px);
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+        margin-right: 0;
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: rem(13px);
+    text-transform: uppercase;
+}

@@ -1,0 +1,53 @@
+.best {
+    background: url('content/best/bg.png') center center / cover no-repeat;
+}
+
+.best__list {
+    display: flex;
+    
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.best__item {
+    flex: 1;
+    margin-right: rem(35px);
+    text-align: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include phones {
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        .best__picture {
+            width: 25%;
+            margin: 0 20px;
+        }
+    }
+}
+
+.meat-icon, .hand-icon, .natural-icon {
+    max-width: rem(75px);
+}
+
+.best__title {
+    color: $black;
+    @include lifehackmedium();
+    font-size: rem(24px);
+    margin-bottom: rem(20px);
+}
+
+.best__text {
+    color: $black;
+    opacity: .8;
+    text-align: center;
+
+    @include phones {
+        text-align: left;
+    }
+}

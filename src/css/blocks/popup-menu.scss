@@ -1,0 +1,73 @@
+.disable-scrolling {
+    overflow: hidden;
+    display: block;
+}
+
+.popup-menu {
+    background-color: $black;
+    opacity: .93;
+    height: 100vh;
+    width: 100vw;    
+    display: none;
+    position: absolute;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 32px;   
+    color: #fff;
+
+    @include phones {
+        right: 20px;
+        top: 2px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:before {
+        content: "\00d7";
+        position: absolute;
+        font-size: 50px;
+    }
+  }
+
+.popup-menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.popup-menu__item {
+    margin-bottom: rem(20px);
+    margin-top: rem(20px);
+    
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-top: rem(20px);
+        
+        text-align: center;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+    }
+    &:last-child::after {
+        display: none;
+    }
+}
+
+.popup-menu__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: rem(26px);
+    @include ubunturegular();
+}

@@ -1,0 +1,153 @@
+.reviews__list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__item {
+    background: center center / cover no-repeat;
+    position: relative;
+    width: 25%;
+    height: 50%;
+    filter: grayscale(100);
+
+    &:hover {
+        .reviews__hover{
+            opacity: 1;
+        }
+    }
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.reviews__hover {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;    
+    right: 0;
+    bottom: 0;
+    background: rgba(#444646, .5);
+    padding: rem(50px) rem(19px) rem(19px) rem(19px);
+    opacity: 0;
+    transition: opacity .4s;
+
+    @include tablets {
+        padding-top: 7%;
+    }
+
+    @include phones {
+        padding-top: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .reviews__text {
+            display: none;
+        }
+
+        .btn--desktop {
+            display: none;
+        }
+        .btn--mobile {
+            display: block;
+        }
+    } 
+}
+
+.btn--mobile {
+    display: none;
+}
+
+.reviews__title {
+    margin-bottom: rem(30px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+
+    @include phones {
+        @include gagalinregular();
+        font-weight: bold;
+        font-size: rem(24px);
+        text-align: center;
+    }
+}
+
+.reviews__text {
+    margin-bottom: rem(20px);
+
+    @include tablets {
+        margin-bottom: rem(10px);
+    }
+
+    @include phones {
+        margin-bottom: rem(5px);
+    }
+}
+
+.reviews-modal {
+    height: 100vh;
+    width: 100vw;   
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+    opacity: .97;    
+}
+
+.reviews-modal__block {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+    color: $black;
+
+    @include phones {
+        width: 300px;
+    }
+}
+
+.reviews-modal__title {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.reviews-modal__desc {
+    text-align: center;
+}
+
+.reviews-modal__close {
+    position: absolute;
+    cursor: pointer;
+    right: rem(40px);
+    top: rem(-10px);
+    color: $red;
+
+    @include phones {
+      right: 30px;
+      top: -10px;
+    }
+
+    &:before {
+      content: "\00d7";
+      position: absolute;
+      font-size: rem(50px);
+      padding: 0;
+    }
+  }

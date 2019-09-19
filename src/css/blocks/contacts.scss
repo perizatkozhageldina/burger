@@ -1,0 +1,117 @@
+.contacts {
+    position: relative;
+    font-size: rem(14px);
+}
+
+.map {
+    min-height: 100vh;
+}
+
+.map__hint {
+    color: $black;
+    font-weight: bold;
+    padding: rem(10px);
+    font-size: rem(14px);
+    border-radius: 5px;
+    background: $orange;
+    opacity: .9;
+}
+
+.map__balloon {
+    display: flex;
+    border-radius: 5px;
+    background-color: $orange;
+    padding: rem(15px);
+    align-items: center;
+    font-size: rem(14px);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+
+    @include phones {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+.footer {
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    min-height: rem(60px);
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(10px);
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: rem(10px);
+    }
+}
+
+.footer__content {
+    max-width: 50%;
+
+    @include phones {
+        max-width: 100%;
+        margin-bottom: rem(10px);
+    }
+}
+
+.footer__address {
+    color: white;
+}
+
+.footer__phone {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.phone-icon {
+    fill: $orange;
+    max-width: rem(12px);
+    max-height: rem(11px);
+}
+
+.footer__number {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: rem(10px);
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.icon {
+    cursor: pointer;
+    max-width: rem(20px);
+    max-height: rem(20px);
+    margin-right: rem(20px);
+    fill: white;
+    opacity: .5;
+    transition: opacity .4s;
+
+    &:hover {
+        fill: white;
+        opacity: 1;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
