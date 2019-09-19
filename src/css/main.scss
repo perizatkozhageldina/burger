@@ -1,0 +1,15 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$z-fixed-menu: 100;
+$z-logo: 20;
+
+@import "base/media.scss";
+
+@import "base/fonts.scss";
+@import "base/layout.scss";
+@import "base/mixins.scss";
+
+@import "blocks/*.scss";

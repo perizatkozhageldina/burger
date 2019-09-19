@@ -1,0 +1,46 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "* Кожагельдина Перизат\r * Иванов Максим\r * Веб для начинающих",
+  "main": "main.js",
+  "scripts": {
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perizatkozhageldina/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perizatkozhageldina/burger/issues"
+  },
+  "homepage": "https://github.com/perizatkozhageldina/burger#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.1.1",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
+  }
+}
