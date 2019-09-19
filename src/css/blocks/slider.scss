@@ -285,6 +285,7 @@
     @include tablets {
         justify-content: center;
         margin-top: rem(100px);
+        align-items: flex-start;
     }
 
     @include phones {

@@ -19,9 +19,12 @@
         text-align: center;
     }
 
+    @include tablets {
+        margin-bottom: 0; 
+    }
+
     @include phones {
         font-size: rem(63px);
-        margin-bottom: rem(20px); 
     }
 
     @include smallscreen {
