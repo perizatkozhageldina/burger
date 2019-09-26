@@ -1,5 +1,5 @@
 .title {
-    font-size: rem(72px);
+    font-size: rem(56px);
     @include gagalinregular();
     color: $yellow;
     margin-bottom: rem(40px);
@@ -24,10 +24,10 @@
     }
 
     @include phones {
-        font-size: rem(63px);
+        font-size: rem(48px);
     }
 
     @include smallscreen {
-        font-size: rem(50px);
+        font-size: rem(36px);
     }
 }
